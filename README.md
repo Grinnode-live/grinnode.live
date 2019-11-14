@@ -19,7 +19,7 @@ grin-wallet.toml :
 
 Tested wallets | can use grinnode.live | problems
 ------------ | ------------- | -------------
-grin-wallet 2.1.0 |  | no known problems 
+grin-wallet 2.1.0 | ```diff + yes ```  | no known problems 
 gin++ | <p style='color:red'> not tested </p> | please send feedback if its working
 
 
