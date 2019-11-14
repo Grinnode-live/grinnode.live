@@ -1,0 +1,83 @@
+<html>
+	<head>
+		<title>GrinNode</title>
+	</head>
+
+	<body>
+<font color="green"><h1>Grinnode.live online</h1></font>
+
+<h3>High Available (HA) API Calls</h3>
+based on the <a href="https://github.com/mimblewimble/grin/blob/master/doc/api/node_api.md#get-status" target="_blank">node_api </a>GRIN coin specs. 
+
+<p> </>
+<p>Following HA GRIN node API calls are available:</p>
+Last Update: 11/2019
+<ul>
+	<li><a href="https://grinnode.live/v1/status">/v1/status</a></li>
+		<ul>
+			<li><a href="https://github.com/mimblewimble/grin/blob/master/doc/api/node_api.md#get-status" target="_blank">Returns various information about the node and the network</a></li>
+		</ul>		
+
+	
+      <li><a href="https://grinnode.live/v1/blocks/">/v1/blocks</a></li>
+		<ul>
+      <li><a href="https://github.com/mimblewimble/grin/blob/master/doc/api/node_api.md#get-blocks" target="_blank">Returns data about a specific block given a hash, a height or an unspent commit.</a></li>
+      		</ul>
+
+
+
+      <li><a href="https://grinnode.live/v1/headers/">/v1/headers</a></li>
+      		<ul>
+
+
+      <li><a href="https://github.com/mimblewimble/grin/blob/master/doc/api/node_api.md#get-headers" target="_blank">Returns data about a block headers given either a hash or height or an output commit. </a></li>
+		</ul>
+
+      <li><a href="https://grinnode.live/v1/peers/">/v1/peers</a> (only allowed Users)</li>
+		<ul>
+
+      <li><a href="https://github.com/mimblewimble/grin/blob/master/doc/api/node_api.md#get-peers-connected" target="_blank">Retrieves all connected peers - BAN and UNBAN not allowed</a></li>
+		</ul>
+
+      <li><a href="https://grinnode.live/v1/chain/">/v1/chain</a></li>
+      		<ul>
+
+      <li><a href="https://github.com/mimblewimble/grin/blob/master/doc/api/node_api.md#chain-endpoint" target="_blank">Retrieves details about the state of the current fork tip</a></li>
+		</ul>
+	
+      
+      <li><a href="https://grinnode.live/v1/txhashset/">/v1/txhashset</a></li>
+      		<ul>
+
+      <li><a href="https://github.com/mimblewimble/grin/blob/master/doc/api/node_api.md#txhashset-endpoint" target="_blank">Retrieve the roots of the TxHashSet</a></li>
+		</ul>
+
+
+      <li><a href="https://grinnode.live/v1/pool/push">/v1/pool/push</a></li>
+      		<ul>
+
+      <li><a href="https://github.com/mimblewimble/grin/blob/master/doc/api/node_api.md#pool-endpoint" target="_blank">Push new transaction to our local transaction pool. Add ?fluff at the end of the URL to bypass Dandelion relay.</a></li>
+		</ul>
+
+
+</ul>
+
+&nbsp;
+&nbsp;
+&nbsp;
+&nbsp;
+
+<h3>Using HA-GRIN Node&nbsp;</h3>
+<p>1. Setup a GRIN Wallet e.g.&nbsp;<a href="https://github.com/mimblewimble/docs/wiki/How-to-use-the-Grin-wallet">https://github.com/mimblewimble/docs/wiki/How-to-use-the-Grin-wallet<br /></a></p>
+<p>2. Use it as <strong><a href="https://github.com/mimblewimble/docs/wiki/How-to-use-the-Grin-wallet#connecting-to-a-node" target="_blank" rel="noopener">API Endpoint</a></strong> or <strong>add</strong> it to your <a href="https://github.com/mimblewimble/docs/wiki/How-to-use-the-Grin-wallet#connecting-to-a-node"><strong>grin-wallet.toml</strong>&nbsp;</a></p>
+<blockquote>
+<p><strong>CLI:<br /></strong>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;./grin-wallet --api_server_address "http://grinnode.live:3413"<br /><br /><strong>grin-wallet.toml</strong>&nbsp;:<br />&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; check_node_api_http_addr = "http://grinnode.live:3413"</p>
+<p>&nbsp;</p>
+</blockquote>
+<p><img width="600" height="421" src="images/blocks-not-bombs-878x1024.png" alt="Use Blocks not Bombs " /></p>
+<p style="text-decoration: underline;">Use Blocks not Bombs</p>
+
+
+
+<body>
+</html>
