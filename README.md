@@ -14,12 +14,21 @@ grin-wallet.toml :
           check_node_api_http_addr = "http://grinnode.live:3413"
 ```
 
+## What is grinnode.live
+It is an High Available (HA) API Calls service for the GRIN community 
+see: https://grinnode.live/
+
 
 #### Other GRIN wallets 
 
 Tested wallets | can use grinnode.live | problems
 ------------ | ------------- | -------------
-grin-wallet 2.1.0 | ```diff + yes ```  | no known problems 
-gin++ | <p style='color:red'> not tested </p> | please send feedback if its working
+grin-wallet 2.1.0 | **yes**  | no known problems 
+grin++ |  not tested | please open an issue if tested
+Wallet 713 |  not tested | please open an issue if tested
+Wimble |  not tested | please open an issue if tested
+
+
+
 
 
