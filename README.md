@@ -13,4 +13,13 @@ CLI:
 grin-wallet.toml :
           check_node_api_http_addr = "http://grinnode.live:3413"
 ```
- 
+
+
+#### Other GRIN wallets 
+
+Tested wallets | can use grinnode.live | problems
+------------ | ------------- | -------------
+grin-wallet 2.1.0 | <style>p{color:green;} yes </style> | no known problems 
+gin++ | <style>p{color:red;}</style> not tested | please send feedback if its working
+
+
