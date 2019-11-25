@@ -42,7 +42,7 @@ Wimble |  not tested | please open an issue if tested
 
 #### Grin default Ports
 
-**Port 3414** is for connectiing GRIN nodes
+**Port 3414** is for connecting GRIN nodes
 
 **Port 3413** is for connecting GRIN wallets
 
