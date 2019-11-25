@@ -12,7 +12,7 @@ Use the IP address "213.239.215.236" instead of the FQDN "grinnode.live"
 
 ## To Connect your GRIN Wallet use:
 
-# Using HA-GRIN Node 
+### Using HA-GRIN Node 
 1. Setup a GRIN Wallet e.g. https://github.com/mimblewimble/docs/wiki/How-to-use-the-Grin-wallet
 
 2. Use it as API Endpoint or add it to your grin-wallet.toml 
