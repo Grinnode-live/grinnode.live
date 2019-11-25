@@ -6,7 +6,7 @@
 ### To Connect your GRIN Node use:
 _$ cat grin-server.toml
 [..]
-peers_preferred = ["213.239.215.236"]
+peers_preferred = ["213.239.215.236:3414"]
 
 Use the IP address "213.239.215.236" instead of the FQDN "grinnode.live"
 
@@ -40,6 +40,9 @@ Wallet 713 |  not tested | please open an issue if tested
 Wimble |  not tested | please open an issue if tested
 
 
+#### Grin default Ports
 
+**Port 3414 is for connectiing GRIN nodes
+Port 3413 is for connecting GRIN wallets**
 
 
