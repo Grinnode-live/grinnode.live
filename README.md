@@ -1,4 +1,3 @@
-# grinnode.live
 # https://Grinnode.live Website
 
 ## HA-IP: 213.239.215.236 
