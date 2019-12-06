@@ -47,3 +47,5 @@ Wimble |  not tested | please open an issue if tested
 **Port 3413** is for connecting GRIN wallets
 
 
+#### CORS disabled
+as of December 2019 CORS on the HTTP(s) API is disabled and can be used from your application or website
