@@ -35,6 +35,7 @@ see: https://grinnode.live/
 Tested wallets | can use grinnode.live | problems
 ------------ | ------------- | -------------
 grin-wallet 2.1.0 | **yes**  | no known problems 
+grin-wallet 3.0.0-beta.1 | **yes**  | no known problems 
 grin++ |  not tested | please open an issue if tested
 Wallet 713 |  not tested | please open an issue if tested
 Wimble |  not tested | please open an issue if tested
