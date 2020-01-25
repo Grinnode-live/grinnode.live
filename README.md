@@ -2,13 +2,17 @@
 
 ## HA-IP: 213.239.215.236 
 
+## +++UPDATE+++
+### We enabled GRIN API v2 on our high-available GRIN-Node's
+
+
 ### Ports available
 ### To Connect your GRIN Node use:
 _$ cat grin-server.toml
 [..]
 peers_preferred = ["213.239.215.236:3414"]
 
-Use the IP address "213.239.215.236" instead of the FQDN "grinnode.live"
+Use the IP address "213.239.215.236" instead or the FQDN "grinnode.live"
 
 ## To Connect your GRIN Wallet use:
 
