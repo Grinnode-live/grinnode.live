@@ -2,12 +2,12 @@
 
 ## HA-IP: 213.239.215.236 
 
-## +++UPDATE+++
+### +++UPDATE+++
 ### We enabled GRIN API v2 on our high-available GRIN-Node's
 
 
 ### Ports available
-### To Connect your GRIN Node use:
+### To Connect your GRIN Node to our high available GRIN-Node system:
 _$ cat grin-server.toml
 [..]
 peers_preferred = ["213.239.215.236:3414"]
@@ -30,7 +30,7 @@ grin-wallet.toml :
 
 
 ## What is grinnode.live
-It is an High Available (HA) API Calls service for the GRIN community 
+It is an High Available (HA) public and free API Calls service for the GRIN community 
 see: https://grinnode.live/
 
 
@@ -54,3 +54,4 @@ Wimble |  not tested | please open an issue if tested
 
 #### CORS disabled
 as of December 2019 CORS on the HTTP(s) API is disabled and can be used from your application or website
+01/2020 - enabled API v2 on all high-available public GRIN-Node
