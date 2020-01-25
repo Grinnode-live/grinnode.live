@@ -20,7 +20,7 @@ a img { border:none; }
 </style>
 <script type="text/javascript">
 // place your images in this array
-var random_images_array = ['ffb41d910d6dccaceae6d3b488c3e89ce6e5e324.png', '45f1468f150369dbbc7ea961df3297ad6aaf27a1.png', 'e16548d62df33358182a12d1f4c906a119db3cad.png', '98d6c6a46e594cec17a775b419413f296f0772a7.png','43eaa7dda52358bfec998456caa95cb4213766f9.png','83298b304330d43634d4a7bb0c82511c8b78a743.png','9a93498577f7900ed7352cc92c759e11094f58e5.png', 'grinsun/3dfc30823ab07076a0e7a51a9ec35a1c3b62d7eb.png', '73574d168c22708f382be01b50846086e582411b.png', 'grinsun/123211cdb55904430c8723498e8e2139aeff47d0.png'];
+var random_images_array = ['f49b6066468863b1b5fe62623ca30863824e0df1.png','ffb41d910d6dccaceae6d3b488c3e89ce6e5e324.png', 'ffb41d910d6dccaceae6d3b488c3e89ce6e5e324.png', '45f1468f150369dbbc7ea961df3297ad6aaf27a1.png', 'e16548d62df33358182a12d1f4c906a119db3cad.png', '98d6c6a46e594cec17a775b419413f296f0772a7.png','43eaa7dda52358bfec998456caa95cb4213766f9.png','83298b304330d43634d4a7bb0c82511c8b78a743.png','9a93498577f7900ed7352cc92c759e11094f58e5.png', 'grinsun/3dfc30823ab07076a0e7a51a9ec35a1c3b62d7eb.png', '73574d168c22708f382be01b50846086e582411b.png', 'grinsun/123211cdb55904430c8723498e8e2139aeff47d0.png'];
     
 function getRandomImage(imgAr, path) {
     path = path || 'images/LovelyGrin/'; // default path here
@@ -41,11 +41,49 @@ function getRandomImage(imgAr, path) {
 <font color="green"><h1>Grinnode.live online</h1></font>
 
 <h3>High Available (HA) API Calls</h3>
-based on the <a href="https://github.com/mimblewimble/grin/blob/master/doc/api/node_api.md#get-status" target="_blank">node_api </a>GRIN coin specs. 
+based on the <a href="https://github.com/mimblewimble/grin/blob/master/doc/api/node_api.md#get-status" target="_blank">v1 node_api </a>GRIN coin specs. 
 
 <p> </>
-<p>Following HA GRIN node API calls are available:</p>
-Last Update: 11/2019
+<p>Following HA GRIN-Node API /v1 & /v2 calls are available:</p>
+Last Update: 01/2020
+
+<h2>+++UPDATE+++</h2>
+<p>We enabled GRIN API v2 on our high-available GRIN-Node's</p>
+
+<p><h3>GRIN API v2:</h3></p>
+Start date: September 30th, 2019
+More information can be found here: <a href="https://github.com/mimblewimble/grin-rfcs/blob/master/text/0007-node-api-v2.md" target="_blank">0007-node-api-v2.md</a>
+
+
+<pre><code>
+<strong>example:</strong>
+
+curl -d ‘{“id”:“json”,“method”:“get_status”,“params”:{} }’ -o - https://grinnode.live/v2/owner 
+
+<strong> answer:</strong>
+
+{
+  "id": "json",
+  "result": {
+    "Ok": {
+      "connections": 121,
+      "protocol_version": 2,
+      "sync_status": "no_sync",
+      "tip": {
+        "height": 527467,
+        "last_block_pushed": "000001a81c92da17102079862b927134e7f8210ad56af892f494a072f5b77b92",
+        "prev_block_to_last": "000024005775cf7e2155d8156e514b6b1f51d98483a7bdc220a22334d2b30749",
+        "total_difficulty": 1456919673376722
+      },
+      "user_agent": "MW/Grin 3.1.0-beta.1"
+    }
+  }
+}
+
+</code></pre>
+
+<p><h3>GRIN API v1:</h3></p>
+The following API-Calls are GRIN API v1 Calls
 <ul>
 	<li><a href="https://grinnode.live/v1/status">/v1/status</a></li>
 		<ul>
