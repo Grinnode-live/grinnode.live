@@ -44,6 +44,9 @@ grin++ |  not tested | please open an issue if tested
 Wallet 713 |  not tested | please open an issue if tested
 Wimble |  not tested | please open an issue if tested
 
+#### Do I need a API secret? 
+No! 
+All API's can be used without any API secret or owner secrets. 
 
 #### Grin default Ports
 
