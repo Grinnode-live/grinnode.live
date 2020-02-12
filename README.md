@@ -1,4 +1,4 @@
-# https://Grinnode.live Website
+# https://Grinnode.live 
 
 ## HA-IP: 213.239.215.236 (ipv4)
 ## HA-IP: [2a01:4f8:a0:905b::2]  (ipv6)
@@ -8,6 +8,7 @@
 
 ##### We enabled GRIN API v2 on our high-available GRIN-Node's
 
+Scheduled downtime: n/a 
 
 ### Ports available
 ### To Connect your GRIN Node to our high available GRIN-Node system:
