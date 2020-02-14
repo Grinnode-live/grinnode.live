@@ -80,7 +80,7 @@ peer_listener_buffer_count = 5
 
 
 ```
-You can download an example grin-server.toml here: 
+You can download an example grin-server.toml here: https://github.com/MCM-Mike/grinnode.live/blob/master/grin-server.toml 
 
 
 
