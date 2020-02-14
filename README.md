@@ -60,6 +60,31 @@ All API's can be used without any API secret or owner secrets.
 **Port 3413** is for connecting GRIN wallets
 
 
+#### grin-server.toml basic setup to connect to Grinnode.live 
+
+```
+peers_preferred = [213.239.215.236:3414]
+
+#maximum number of inbound peer connections
+peer_max_inbound_count = 30
+
+#maximum number of outbound peer connections
+peer_max_outbound_count = 10
+
+#preferred minimum number of outbound peers (we'll actively keep trying to add peers
+#until we get to at least this number)
+peer_min_preferred_outbound_count = 10
+
+#amount of incoming connections temporarily allowed to exceed peer_max_inbound_count
+peer_listener_buffer_count = 5
+
+
+```
+You can download an example grin-server.toml here: 
+
+
+
+
 #### CORS disabled
 as of December 2019 CORS on the HTTP(s) API is disabled and can be used from your application or website
 01/2020 - enabled API v2 on all high-available public GRIN-Node
