@@ -8,7 +8,7 @@ Our Webservers and Loadbalancer are logging requests when using grinnode.live in
 * Page requested
 * Protocol requested 
 * IP address
-* Bytes served
+* Amount of Bytes served 
 * User agent
 * Referrer
 * Error logs
