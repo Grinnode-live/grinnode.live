@@ -10,7 +10,11 @@
 
 Scheduled downtime: n/a 
 
-### Ports available
+## What is grinnode.live
+It is an High Available (HA) public and free API service and seed node for the GRIN community
+see: https://grinnode.live/
+
+
 ### To Connect your GRIN Node to our high available GRIN-Node system:
 _$ cat grin-server.toml
 [..]
@@ -33,9 +37,6 @@ grin-wallet.toml :
 ```
 
 
-## What is grinnode.live
-It is an High Available (HA) public and free API Calls service for the GRIN community 
-see: https://grinnode.live/
 
 
 #### Other GRIN wallets 
@@ -43,7 +44,8 @@ see: https://grinnode.live/
 Tested wallets | can use grinnode.live | problems
 ------------ | ------------- | -------------
 grin-wallet 2.1.0 | **yes**  | no known problems 
-grin-wallet 3.0.0-beta.1 | **yes**  | no known problems 
+grin-wallet 3.0.X-beta.1 | **yes**  | no known problems 
+niffler version 0.5.0 | **yes** | no known problems
 grin++ |  not tested | please open an issue if tested
 Wallet 713 |  not tested | please open an issue if tested
 Wimble |  not tested | please open an issue if tested
