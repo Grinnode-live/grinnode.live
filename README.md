@@ -19,8 +19,9 @@ see: https://grinnode.live/
 _$ cat grin-server.toml
 [..]
 peers_preferred = ["213.239.215.236:3414"]
+or
+peers_preferred = ["http://grinnode.live:3414"]
 
-Use the IP address "213.239.215.236" instead or the FQDN "grinnode.live"
 
 ## To Connect your GRIN Wallet use:
 
@@ -30,10 +31,10 @@ Use the IP address "213.239.215.236" instead or the FQDN "grinnode.live"
 2. Use it as API Endpoint or add it to your grin-wallet.toml 
 ```bash
 CLI:
-           ./grin-wallet --api_server_address "http//grinnode.live:3413"
+           ./grin-wallet --api_server_address "https://grinnode.live:3413"
 
 grin-wallet.toml :
-          check_node_api_http_addr = "http://grinnode.live:3413"
+          check_node_api_http_addr = "https://grinnode.live:3413"
 ```
 
 
