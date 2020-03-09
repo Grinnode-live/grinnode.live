@@ -30,7 +30,7 @@ Use the IP address "213.239.215.236" instead or the FQDN "grinnode.live"
 2. Use it as API Endpoint or add it to your grin-wallet.toml 
 ```bash
 CLI:
-           ./grin-wallet --api_server_address "https//grinnode.live:3413"
+           ./grin-wallet --api_server_address "http//grinnode.live:3413"
 
 grin-wallet.toml :
           check_node_api_http_addr = "http://grinnode.live:3413"
