@@ -102,8 +102,13 @@ We try to keep all servers high-available using at least two (2) geo-redunant da
  
 [High-Resolution image](https://github.com/MCM-Mike/grinnode.live/blob/master/documentation/pictures/grinnode.live_draw.io.jpg)
 
+----------------
 
-Any questions, suggestions or requests?  
+
+
+Any questions, suggestions or requests? 
+
+https://github.com/MCM-Mike/grinnode.live/blob/master/contact.md
  
 
 
