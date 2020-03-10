@@ -86,8 +86,26 @@ peer_listener_buffer_count = 5
 You can download an example grin-server.toml here: https://github.com/MCM-Mike/grinnode.live/blob/master/grin-server.toml 
 
 
-
-
 #### CORS disabled
 as of December 2019 CORS on the HTTP(s) API is disabled and can be used from your application or website
 01/2020 - enabled API v2 on all high-available public GRIN-Node
+
+
+#### Infrastructure Grinnode.live
+We try to keep all servers high-available using at least two (2) geo-redunant datacenters accross Europe.
+
+
+<a target="_blank" href="https://github.com/MCM-Mike/grinnode.live/blob/master/documentation/pictures/grinnode.live_draw.io.jpg"> <p align="center">
+  <img width="660" height="480" src="https://github.com/MCM-Mike/grinnode.live/blob/master/documentation/pictures/grinnode.live_draw.io.jpg">
+</p></a>
+
+ 
+[High-Resolution image](https://github.com/MCM-Mike/grinnode.live/blob/master/documentation/pictures/grinnode.live_draw.io.jpg)
+
+
+Any questions, suggestions or requests?  
+ 
+
+
+
+
