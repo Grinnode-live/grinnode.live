@@ -18,5 +18,5 @@ Address: **3BZ1mWwmyGLghYEpJ7niTtQiH7Z45ZeVtW**
 
 **Contact:**
 
-If you need to contact me you can do so here on Github or via Keybase https://keybase.io/mcmmike
+If you need to contact me you can do so here on Github or via Keybase https://keybase.io/MCMMike/chat
 
