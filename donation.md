@@ -4,6 +4,8 @@
 
 **Tor-Address**: cgodjue5g7ebqv3bgrt6sfwbvq4ricibnxjwkqimu2apbdyn7c752iyd 
 
+**Grin++:** http://cgodjue5g7ebqv3bgrt6sfwbvq4ricibnxjwkqimu2apbdyn7c752iyd.grinplusplus.com/ 
+
 **HTTP-Sending**: http://wallet.grinnode.live:3415 
 
 GRIN Wallet-Server is not high-available, so if unreachable please contact me.
