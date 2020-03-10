@@ -6,5 +6,7 @@ Via GRIN:
 
 **HTTP-Sending**: http://wallet.grinnode.live:3415 
 
+*Wallet-Server is not high-available, so if unreachable please contact me. *
+
 Contact:
 If you need to contact me you can do so here on Github or via Keybase https://keybase.io/mcmmike
