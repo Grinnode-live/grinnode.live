@@ -91,6 +91,7 @@ as of December 2019 CORS on the HTTP(s) API is disabled and can be used from you
 01/2020 - enabled API v2 on all high-available public GRIN-Node
 
 
+
 #### Infrastructure Grinnode.live
 We try to keep all servers high-available using at least two (2) geo-redunant datacenters accross Europe.
 
