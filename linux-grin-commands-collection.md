@@ -60,10 +60,13 @@ Send GRIN using GRIN-Wallet command line
 Get total inbound connection number
 
 ```
-curl -d  '{"id":"json","method":"get_connected_peers","params":{} }' -o - https://grinnode.live/v2/owner  | jq ".result[] |.[]| {direction}"  |grep -c "Inbound" ```
+curl -d  '{"id":"json","method":"get_connected_peers","params":{} }' -o - https://grinnode.live/v2/owner  | jq ".result[] |.[]| {direction}"  |grep -c "Inbound" 
+```
 
 -----------------------------------------
 
 Get total inbound outbound number
 
-```curl -d  '{"id":"json","method":"get_connected_peers","params":{} }' -o - https://grinnode.live/v2/owner  | jq ".result[] |.[]| {direction}"  |grep -c "Outbound" ```
+```
+curl -d  '{"id":"json","method":"get_connected_peers","params":{} }' -o - https://grinnode.live/v2/owner  | jq ".result[] |.[]| {direction}"  |grep -c "Outbound" 
+```
