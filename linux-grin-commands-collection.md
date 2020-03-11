@@ -54,3 +54,16 @@ Send GRIN using GRIN-Wallet command line
 ```--message "Donation Grinnode.live"``` Message is optional
 
 ```-m http 5```  sending via HTTP "5" (amount) GRIN
+
+-----------------------------------------
+
+Get total inbound connection number
+
+```
+curl -d  '{"id":"json","method":"get_connected_peers","params":{} }' -o - https://grinnode.live/v2/owner  | jq ".result[] |.[]| {direction}"  |grep -c "Inbound" ```
+
+-----------------------------------------
+
+Get total inbound outbound number
+
+```curl -d  '{"id":"json","method":"get_connected_peers","params":{} }' -o - https://grinnode.live/v2/owner  | jq ".result[] |.[]| {direction}"  |grep -c "Outbound" ```
