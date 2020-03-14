@@ -69,4 +69,4 @@ the internal Servers.
 #### FAQ:
 (will be added if needed)
 
-(1) All T-Shirts will be sponsored by https://grin.fan/ 
+(1) All T-Shirts will be sponsored by https://grin.fan/product/grinshirt/
