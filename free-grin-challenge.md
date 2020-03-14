@@ -18,7 +18,7 @@ These results will be stored in a database and compared.
 
 #### Where can I see my Grin-Node rank?
 
-[GRIN-Node rank here](http://c-node03-api.grinnode.live/)
+[GRIN-Node rank here](https://grinnode.live/challenge)
 
 **Description:**
 
