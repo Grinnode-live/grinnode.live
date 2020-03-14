@@ -57,8 +57,16 @@ Rank | Node | Price
 20 | winner will be announced | X amount GRIN's  + unknown
 
 #### How to claim your price?
-Get in contact with us and proof you own this node. 
-Methods of proofing will be added later here for Windows/Linux users. 
+Get in (contact)[https://github.com/MCM-Mike/grinnode.live/blob/master/contact.md] with us and proof you own this node. 
+We will publish the winners here and every winner gets a uniq URL which he has to visit from his Grin-Node IP address. 
+
+**For Windows Users:**
+Just open a browser from your grin-node IP address and visit your assigned link.
+
+**For Linux Users:**
+Use any command line tool of your choice to send a /GET request to the assigned link.
+
+```curl $URL:8000/winner/node-challenge/12323```
 
 #### Why are we doing this?
 To stabilize the GRIN-Network, we need to ensure we have enough running Grin-Nodes on the Main-Grin-Network. 
