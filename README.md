@@ -19,8 +19,6 @@ see: https://grinnode.live/
 _$ cat grin-server.toml
 [..]
 peers_preferred = ["213.239.215.236:3414"]
-or
-peers_preferred = ["http://grinnode.live:3414"]
 
 
 ## To Connect your GRIN Wallet use:
