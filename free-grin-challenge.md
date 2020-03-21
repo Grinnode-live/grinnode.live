@@ -1,7 +1,7 @@
 # Grinnode.live Uptime Challenge free GRIN prices giveaway
 
 ## How can you participate ?
-It is simple, just run a GRIN Node over the measured time period from XX.XX.XXXX:XX:XX:XX to XX.XX.XXXX:XX:XX:XX 
+It is simple, just run a GRIN Node over the measured time period from 22.03.2020:12:00:00 to 22.04.2020:12:00:00 (UTC)
 and connect your GRIN-Node to [Grinnode.live](https://github.com/MCM-Mike/grinnode.live#to-connect-your-grin-node-to-our-high-available-grin-node-system)
 
 
@@ -35,26 +35,26 @@ The **first TOP 20** (non commercial) nodes with highest up time are getting the
 
 Rank | Node | Price
 --- | --- | ---
-**1** | winner will be announced | XXX amount GRIN's + unknown
-**2** |winner will be announced| XX amount GRIN's + unknown
-**3** | winner will be announced| XX amount GRIN's + unknown
-**4** |winner will be announced | XX amount GRIN's + unknown
-**5** | winner will be announced| XX amount GRIN's + unknown
-6 | winner will be announced | XX amount GRIN's + unknown 
-7 | winner will be announced| XX amount GRIN's + unknown
-8 | winner will be announced | XX amount GRIN's + unknown
-9 | winner will be announced | XX amount GRIN's + unknown
-10 | winner will be announced | XX amount GRIN's + unknown
-11 | winner will be announced | XX amount GRIN's + unknown
-12 | winner will be announced| XX amount GRIN's + unknown
-13 | winner will be announced | XX amount GRIN's  + unknown
-14 | winner will be announced | XX amount GRIN's  + unknown
-15 | winner will be announced | xX amount GRIN's  + unknown
-16 | winner will be announced | X amount GRIN's  + unknown
-17 | winner will be announced | X amount GRIN's  + unknown
-18 | winner will be announced| X amount GRIN's  + unknown
-19 | winner will be announced | X amount GRIN's  + unknown
-20 | winner will be announced | X amount GRIN's  + unknown
+**1** | winner will be announced | 200 amount GRIN's + GRIN T-Shirt
+**2** |winner will be announced| 99 amount GRIN's + GRIN T-Shirt
+**3** | winner will be announced| 75 amount GRIN's + GRIN T-Shirt
+**4** |winner will be announced | 60 amount GRIN's 
+**5** | winner will be announced| 50 amount GRIN's 
+6 | winner will be announced | 40 amount GRIN's 
+7 | winner will be announced| 40 amount GRIN's 
+8 | winner will be announced | 40 amount GRIN's 
+9 | winner will be announced | 30 amount GRIN's 
+10 | winner will be announced | 30 amount GRIN's 
+11 | winner will be announced | 30 amount GRIN's 
+12 | winner will be announced| 20 amount GRIN's 
+13 | winner will be announced | 20 amount GRIN's
+14 | winner will be announced | 20 amount GRIN's  
+15 | winner will be announced | 10 amount GRIN's + GRIN T-Shirt
+16 | winner will be announced | 9 amount GRIN's  
+17 | winner will be announced | 9 amount GRIN's  
+18 | winner will be announced| 9 amount GRIN's  + GRIN T-Shirt
+19 | winner will be announced | 9 amount GRIN's  
+20 | winner will be announced | 9 amount GRIN's + GRIN T-Shirt
 
 #### How to claim your price?
 Get in (contact)[https://github.com/MCM-Mike/grinnode.live/blob/master/contact.md] with us and proof you own this node. 
@@ -66,6 +66,7 @@ Just open a browser from your grin-node IP address and visit your assigned link.
 **For Linux Users:**
 Use any command line tool of your choice to send a /GET request to the assigned link.
 
+Challenge URL will be published after Node-Challenge is over. 
 ```curl $URL:8000/winner/node-challenge/12323```
 
 #### Why are we doing this?
