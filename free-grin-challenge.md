@@ -35,26 +35,26 @@ The **first TOP 20** (non commercial) nodes with highest up time are getting the
 
 Rank | Node | Price
 --- | --- | ---
-**1** | winner will be announced | 200 amount GRIN's + GRIN T-Shirt
-**2** |winner will be announced| 99 amount GRIN's + GRIN T-Shirt
-**3** | winner will be announced| 75 amount GRIN's + GRIN T-Shirt
-**4** |winner will be announced | 60 amount GRIN's 
-**5** | winner will be announced| 50 amount GRIN's 
-6 | winner will be announced | 40 amount GRIN's 
-7 | winner will be announced| 40 amount GRIN's 
-8 | winner will be announced | 40 amount GRIN's 
-9 | winner will be announced | 30 amount GRIN's 
-10 | winner will be announced | 30 amount GRIN's 
-11 | winner will be announced | 30 amount GRIN's 
-12 | winner will be announced| 20 amount GRIN's 
-13 | winner will be announced | 20 amount GRIN's
-14 | winner will be announced | 20 amount GRIN's  
-15 | winner will be announced | 10 amount GRIN's + GRIN T-Shirt
-16 | winner will be announced | 9 amount GRIN's  
-17 | winner will be announced | 9 amount GRIN's  
-18 | winner will be announced| 9 amount GRIN's  + GRIN T-Shirt
-19 | winner will be announced | 9 amount GRIN's  
-20 | winner will be announced | 9 amount GRIN's + GRIN T-Shirt
+**1** | winner will be announced | 200 GRIN's + GRIN T-Shirt
+**2** |winner will be announced| 99 GRIN's + GRIN T-Shirt
+**3** | winner will be announced| 75 GRIN's + GRIN T-Shirt
+**4** |winner will be announced | 60 GRIN's 
+**5** | winner will be announced| 50 GRIN's 
+6 | winner will be announced | 40 GRIN's 
+7 | winner will be announced| 40 GRIN's 
+8 | winner will be announced | 40 GRIN's 
+9 | winner will be announced | 30 GRIN's 
+10 | winner will be announced | 30 GRIN's 
+11 | winner will be announced | 30 GRIN's 
+12 | winner will be announced| 20 GRIN's 
+13 | winner will be announced | 20 GRIN's
+14 | winner will be announced | 20 GRIN's  
+15 | winner will be announced | 10 GRIN's + GRIN T-Shirt
+16 | winner will be announced | 9 GRIN's  
+17 | winner will be announced | 9 GRIN's  
+18 | winner will be announced| 9 GRIN's  + GRIN T-Shirt
+19 | winner will be announced | 9 GRIN's  
+20 | winner will be announced | 9 GRIN's + GRIN T-Shirt
 
 #### How to claim your price?
 Get in (contact)[https://github.com/MCM-Mike/grinnode.live/blob/master/contact.md] with us and proof you own this node. 
