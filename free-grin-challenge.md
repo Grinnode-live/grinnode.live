@@ -13,7 +13,7 @@ There are different GRIN-Nodes your can be running to participate in this challe
 - [Grin++](https://grinplusplus.github.io/#/)
 
 #### How are we calculating your Grin node uptime?
-We are querying our publicly available [GRIN-API](https://grinnode.live/) every XX minutes. 
+We are querying our publicly available [GRIN-API](https://grinnode.live/) every 10 minutes. 
 These results will be stored in a database and compared.
 
 #### Where can I see my Grin-Node rank?
