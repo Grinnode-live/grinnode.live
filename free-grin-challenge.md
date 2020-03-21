@@ -1,7 +1,7 @@
-# Grinnode.live Uptime Challenge free GRIN prices giveaway
+# Grinnode.live Uptime Challenge and free GRIN prices giveaway
 
 ## How can you participate ?
-It is simple, just run a GRIN Node over the measured time period from 22.03.2020:12:00:00 to 22.04.2020:12:00:00 (UTC)
+It is simple, just run a GRIN Node over the measured time period from **22.03.2020:12:00:00 to 22.04.2020:12:00:00 (UTC)**
 and connect your GRIN-Node to [Grinnode.live](https://github.com/MCM-Mike/grinnode.live#to-connect-your-grin-node-to-our-high-available-grin-node-system)
 
 
@@ -10,7 +10,7 @@ There are different GRIN-Nodes your can be running to participate in this challe
 
 - Core Grin-Node (https://github.com/mimblewimble/docs/wiki/How-to-run-a-Grin-node) 
 - Core Grin-Node on Google-Cloud https://github.com/mimblewimble/docs/wiki/How-to:-Run-a-Grin-node-on-Google-Cloud-for-free
-- Grin++ 
+- [Grin++](https://grinplusplus.github.io/#/)
 
 #### How are we calculating your Grin node uptime?
 We are querying our publicly available [GRIN-API](https://grinnode.live/) every XX minutes. 
