@@ -35,6 +35,7 @@ grin-wallet.toml :
           check_node_api_http_addr = "https://grinnode.live:3413"
 ```
 
+When using the Grinnode Wallet API , you are trusting us to run a Grin node. It is recommended to run your own Grin-Node and use it instead of our API which is better for your privacy. 
 
 
 
