@@ -1,7 +1,7 @@
 # Grinnode.live Uptime Challenge and free GRIN prices giveaway
 
 ## How can you participate ?
-It is simple, just run a GRIN Node over the measured time period from **22.03.2020:12:00:00 to 22.04.2020:12:00:00 (UTC)**
+It is simple, just run a GRIN Node over the measured time period from **22.03.2020 12:00:00 noon to 22.04.2020 12:00:00 noon (UTC+0)**
 and connect your GRIN-Node to [Grinnode.live](https://github.com/MCM-Mike/grinnode.live#to-connect-your-grin-node-to-our-high-available-grin-node-system)
 
 
