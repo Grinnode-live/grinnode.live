@@ -11,9 +11,11 @@ ____ Wallet Summary Info - Account 'default' as of height 602336 ____
  -------------------------------- | ------------- 
  Currently Spendable              | 1.000000000 
 ```
-When using the Grinnode Wallet API , you are trusting us to run a Grin node. It is recommended to run your own Grin-Node and use it instead of our API which is better for your privacy. 
 -----------------------------------------
 
+When using the Grinnode Wallet API , you are trusting us to run a Grin node. It is recommended to run your own Grin-Node and use it instead of our API which is better for your privacy.
+
+-----------------------------------------
 Check if Tor address is up and running:
 
 ```curl --expect100-timeout 10 -X POST http://cgosdfdjue5g7ebqv3bgrt6sfwbvq4ricibnxjwkqimu2apbdyn7c752iyd.grinplusplus.com/v2/foreign -d '{"jsonrpc": "2.0","method": "check_version","id": 1,"params": []}' ```
