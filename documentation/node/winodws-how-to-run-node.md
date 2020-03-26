@@ -1,8 +1,11 @@
-###Run Grin-Node on Windows
+## Run Grin-Node on Windows
 ========================
 
-**Always download it from official GRIN GITHUB repository:**
+### **Always download it from official GRIN GITHUB repository:**
+
 https://github.com/mimblewimble/grin/releases
+
+
 
 **1. Download latest release for Windows**
 
