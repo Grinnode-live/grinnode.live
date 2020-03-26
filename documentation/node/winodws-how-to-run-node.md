@@ -1,5 +1,5 @@
 ## Run Grin-Node on Windows
-========================
+
 
 ### **Always download it from official GRIN GITHUB repository:**
 
