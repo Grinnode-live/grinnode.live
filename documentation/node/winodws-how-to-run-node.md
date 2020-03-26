@@ -35,7 +35,7 @@ _It's a ZIP file similar to this one: grin-v3.1.1-beta.1-win-x64.zip_
 
 **9. run the node with the following command:**
 
-```\grin>grin.exe> server -c grin-server.toml run```
+```\grin> grin.exe server -c grin-server.toml run```
 
 10. a small windows will stay open while the Grin-Node is running. 
 
