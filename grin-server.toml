@@ -101,11 +101,13 @@ host = "::"
 port = 3414
 
 #how to seed this server, can be None, List or DNSSeed
-seeding_type = "DNSSeed"
+seeding_type = "List"
 
 #If the seeding type is List, the list of peers to connect to can
 #be specified as follows:
 #seeds = ["192.168.0.1:3414","192.168.0.2:3414"]
+seeds = ["mainnet-seed.grinnode.live:3414"]
+
 
 #hardcoded peer lists for allow/deny
 #will *only* connect to peers in allow list
