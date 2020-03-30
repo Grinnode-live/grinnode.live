@@ -1,4 +1,4 @@
-Use GRIN-Wallet without own GRIN-Node:
+### Use GRIN-Wallet without own GRIN-Node:
 
 ```_$ grin-wallet --api_server_address "https://grinnode.live:3413" info```
 
@@ -16,7 +16,7 @@ ____ Wallet Summary Info - Account 'default' as of height 602336 ____
 When using the Grinnode Wallet API , you are trusting us to run a Grin node. It is recommended to run your own Grin-Node and use it instead of our API which is better for your privacy.
 
 -----------------------------------------
-Check if Tor address is up and running:
+### Check if Tor address is up and running:
 
 ```curl --expect100-timeout 10 -X POST http://cgosdfdjue5g7ebqv3bgrt6sfwbvq4ricibnxjwkqimu2apbdyn7c752iyd.grinplusplus.com/v2/foreign -d '{"jsonrpc": "2.0","method": "check_version","id": 1,"params": []}' ```
 
@@ -44,7 +44,7 @@ Not OK:
 
 -----------------------------------------
 
-Send GRIN using GRIN-Wallet command line
+### Send GRIN using GRIN-Wallet command line
 
 ```grin-wallet --api_server_address "https://grinnode.live:3413" send -d http://wallet.grinnode.live:3415 --message "Donation Grinnode.live" -m http 5```
 
@@ -59,7 +59,7 @@ Send GRIN using GRIN-Wallet command line
 
 -----------------------------------------
 
-Get total inbound connection number
+### Get total inbound connection number
 
 ```
 curl -d  '{"id":"json","method":"get_connected_peers","params":{} }' -o - https://grinnode.live/v2/owner  | jq ".result[] |.[]| {direction}"  |grep -c "Inbound" 
