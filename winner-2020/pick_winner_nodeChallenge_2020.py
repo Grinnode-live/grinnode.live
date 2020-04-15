@@ -1,18 +1,32 @@
 #!/usr/bin/env python3
 
+# made in group therapy  togther with @energyburn and @phyro
+# thank you. 
+
 import requests
 import random
+
+NUM_GRAND_PRIZES = 20
+NUM_LUCKY_LOSERS = 10
+
 
 # Query the API for list of peers
 response = requests.get("https://grinnode.live:8080/peers")
 
-# Convert request data to dictionary of peers
+# Extract list of peers from request data
 peers = response.json()["result"]
 
-# Create a bag of peers excluding the first 20
-lucky_bag = peers[20:]
+# Extract the first 20 grand prize winners
+tickets = list(range(NUM_GRAND_PRIZES))
+print("\n\nGRAND PRIZE WINNERS:")
+for i in range(NUM_GRAND_PRIZES):
+    print("Peer ", tickets[i])
+    print(peers[i])
 
-# Select 10 peers from the bag
-lucky_losers = random.sample(lucky_bag, 10) 
-for lucky_loser in lucky_losers:
-    print("Lucky loser:", lucky_loser)
+# Select lucky losers from the remaining peers
+peers = peers[NUM_GRAND_PRIZES:] # Exclude grand prize winners
+tickets = [random.randrange(len(peers)) for i in range(NUM_LUCKY_LOSERS)]
+print("\n\nLUCKY LOSERS:")
+for i in range(NUM_LUCKY_LOSERS):
+    print("Peer ", tickets[i])
+    print(peers[i])
