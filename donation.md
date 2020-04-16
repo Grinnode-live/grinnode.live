@@ -2,7 +2,7 @@
 
 **Via GRIN:**
 
-**Tor-Address**: cgodjue5g7ebqv3bgrt6sfwbvq4ricibnxjwkqimu2apbdyn7c752iyd 
+**Tor-Address**: cgodjue5g7ebqv3bgrt6sfwbvq4ricibnxjwkqimu2apbdyn7c752iyd.onion
 
 **Grin++:** http://cgodjue5g7ebqv3bgrt6sfwbvq4ricibnxjwkqimu2apbdyn7c752iyd.grinplusplus.com/ 
 
@@ -14,8 +14,9 @@ GRIN Wallet-Server is not high-available, so if unreachable please contact me.
 
 Via BTC:
 
-Address: **3BZ1mWwmyGLghYEpJ7niTtQiH7Z45ZeVtW**
-
+Address: **3NYv5FZVHqYNvdSAUzTotfxmTaRaV8ugPw**
+P2WPKH: **bc1q7jp7jsa34mx5hfvmj2q4ujdx6w4flgv2dzx5prrvk3s0vc0zktgsl4rc6l**
+P2WSH: **bc1qcwfg83r3drp8szhkzy4wap7w868w6tttt46udf**
 
 
 **Contact:**
