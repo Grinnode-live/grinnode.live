@@ -33,9 +33,9 @@ These results will be stored in a database and compared.
 #### Prices / Free giveaways 
 The **first TOP 20** (non commercial) nodes with highest up time are getting the following prices:
 
-Rank | Node | Price
---- | --- | ---
-**1** | winner will be announced | 200 GRIN's + GRIN T-Shirt
+Rank | Node | Price | confirmation URL
+--- | --- | --- | --- 
+**1** | winner will be announced | 200 GRIN's + GRIN T-Shirt | 
 **2** |winner will be announced| 99 GRIN's + GRIN T-Shirt
 **3** | winner will be announced| 75 GRIN's + GRIN T-Shirt
 **4** |winner will be announced | 60 GRIN's 
