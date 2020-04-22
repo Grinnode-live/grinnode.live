@@ -33,8 +33,8 @@ These results will be stored in a database and compared.
 #### Prices / Free giveaways 
 The **first TOP 20** (non commercial) nodes with highest up time are getting the following prices:
 
-Rank | Node | Price | confirmation URL
---- | --- | --- | --- 
+Rank | Node | Price | confirmation URL | claimed
+--- | --- | --- | --- | ---
 **1** | winner will be announced | 200 GRIN's + GRIN T-Shirt | https://grinnode.live:8080/node-challenge/verify|
 **2** |winner will be announced| 99 GRIN's + GRIN T-Shirt | https://grinnode.live:8080/node-challenge/verify|
 **3** | winner will be announced| 75 GRIN's + GRIN T-Shirt | https://grinnode.live:8080/node-challenge/verify|
@@ -47,7 +47,7 @@ Rank | Node | Price | confirmation URL
 10 | winner will be announced | 30 GRIN's | https://grinnode.live:8080/node-challenge/verify|
 11 | winner will be announced | 30 GRIN's | https://grinnode.live:8080/node-challenge/verify|
 12 | winner will be announced| 20 GRIN's | https://grinnode.live:8080/node-challenge/verify|
-13 | winner will be announced | 20 GRIN's| https://grinnode.live:8080/node-challenge/verify|
+13 | winner will be announced | 20 GRIN's| https://grinnode.live:8080/node-challenge/verify|yes, donated to Grin community
 14 | winner will be announced | 20 GRIN's | https://grinnode.live:8080/node-challenge/verify| 
 15 | winner will be announced | 10 GRIN's + GRIN T-Shirt | https://grinnode.live:8080/node-challenge/verify|
 16 | winner will be announced | 9 GRIN's  | https://grinnode.live:8080/node-challenge/verify|
