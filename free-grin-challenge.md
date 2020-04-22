@@ -35,30 +35,31 @@ The **first TOP 20** (non commercial) nodes with highest up time are getting the
 
 Rank | Node | Price | confirmation URL
 --- | --- | --- | --- 
-**1** | winner will be announced | 200 GRIN's + GRIN T-Shirt | 
-**2** |winner will be announced| 99 GRIN's + GRIN T-Shirt
-**3** | winner will be announced| 75 GRIN's + GRIN T-Shirt
-**4** |winner will be announced | 60 GRIN's 
-**5** | winner will be announced| 50 GRIN's 
-6 | winner will be announced | 40 GRIN's 
-7 | winner will be announced| 40 GRIN's 
-8 | winner will be announced | 40 GRIN's 
-9 | winner will be announced | 30 GRIN's 
-10 | winner will be announced | 30 GRIN's 
-11 | winner will be announced | 30 GRIN's 
-12 | winner will be announced| 20 GRIN's 
-13 | winner will be announced | 20 GRIN's
-14 | winner will be announced | 20 GRIN's  
-15 | winner will be announced | 10 GRIN's + GRIN T-Shirt
-16 | winner will be announced | 9 GRIN's  
-17 | winner will be announced | 9 GRIN's  
-18 | winner will be announced| 9 GRIN's  + GRIN T-Shirt
-19 | winner will be announced | 9 GRIN's  
-20 | winner will be announced | 9 GRIN's + GRIN T-Shirt
+**1** | winner will be announced | 200 GRIN's + GRIN T-Shirt | https://grinnode.live:8080/node-challenge/verify|
+**2** |winner will be announced| 99 GRIN's + GRIN T-Shirt | https://grinnode.live:8080/node-challenge/verify|
+**3** | winner will be announced| 75 GRIN's + GRIN T-Shirt | https://grinnode.live:8080/node-challenge/verify|
+**4** |winner will be announced | 60 GRIN's   | https://grinnode.live:8080/node-challenge/verify|
+**5** | winner will be announced| 50 GRIN's  | https://grinnode.live:8080/node-challenge/verify|
+6 | winner will be announced | 40 GRIN's | https://grinnode.live:8080/node-challenge/verify|
+7 | winner will be announced| 40 GRIN's | https://grinnode.live:8080/node-challenge/verify|
+8 | winner will be announced | 40 GRIN's | https://grinnode.live:8080/node-challenge/verify|
+9 | winner will be announced | 30 GRIN's | https://grinnode.live:8080/node-challenge/verify|
+10 | winner will be announced | 30 GRIN's | https://grinnode.live:8080/node-challenge/verify|
+11 | winner will be announced | 30 GRIN's | https://grinnode.live:8080/node-challenge/verify|
+12 | winner will be announced| 20 GRIN's | https://grinnode.live:8080/node-challenge/verify|
+13 | winner will be announced | 20 GRIN's| https://grinnode.live:8080/node-challenge/verify|
+14 | winner will be announced | 20 GRIN's | https://grinnode.live:8080/node-challenge/verify| 
+15 | winner will be announced | 10 GRIN's + GRIN T-Shirt | https://grinnode.live:8080/node-challenge/verify|
+16 | winner will be announced | 9 GRIN's  | https://grinnode.live:8080/node-challenge/verify|
+17 | winner will be announced | 9 GRIN's  | https://grinnode.live:8080/node-challenge/verify|
+18 | winner will be announced| 9 GRIN's  + GRIN T-Shirt | https://grinnode.live:8080/node-challenge/verify|
+19 | winner will be announced | 9 GRIN's  | https://grinnode.live:8080/node-challenge/verify|
+20 | winner will be announced | 9 GRIN's + GRIN T-Shirt| https://grinnode.live:8080/node-challenge/verify|
 
 #### How to claim your price?
 Get in (contact)[https://github.com/MCM-Mike/grinnode.live/blob/master/contact.md] with us and proof you own this node. 
-We will publish the winners here and every winner gets a uniq URL which he has to visit from his Grin-Node IP address. 
+Access the confirmation URL https://grinnode.live:8080/node-challenge/verify from your Grin-Node via Browser (on Windows) or ```Curl```on Linux. 
+
 
 **For Windows Users:**
 Just open a browser from your grin-node IP address and visit your assigned link.
@@ -67,7 +68,11 @@ Just open a browser from your grin-node IP address and visit your assigned link.
 Use any command line tool of your choice to send a /GET request to the assigned link.
 
 Challenge URL will be published after Node-Challenge is over. 
-```curl $URL:8000/winner/node-challenge/12323```
+```curl https://grinnode.live:8080/node-challenge/verify```
+Ourput:
+Verified! Your prize: GRIN T-Shirt, Token: 1234567
+
+Please send us the Token once you verified you are one of the lucky winners. 
 
 #### Why are we doing this?
 To stabilize the GRIN-Network, we need to ensure we have enough running Grin-Nodes on the Main-Grin-Network. 
