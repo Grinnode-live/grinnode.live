@@ -5,9 +5,13 @@
 
 import requests
 import random
+import datetime
+
 
 NUM_GRAND_PRIZES = 20
 NUM_LUCKY_LOSERS = 10
+
+x = datetime.datetime.now()
 
 
 # Query the API for list of peers
@@ -19,6 +23,8 @@ peers = response.json()["result"]
 # Extract the first 20 grand prize winners
 tickets = list(range(NUM_GRAND_PRIZES))
 print("\n\nGRAND PRIZE WINNERS:")
+print(x)
+
 for i in range(NUM_GRAND_PRIZES):
     print("Peer ", tickets[i])
     print(peers[i])
@@ -27,6 +33,8 @@ for i in range(NUM_GRAND_PRIZES):
 peers = peers[NUM_GRAND_PRIZES:] # Exclude grand prize winners
 tickets = [random.randrange(len(peers)) for i in range(NUM_LUCKY_LOSERS)]
 print("\n\nLUCKY LOSERS:")
+print(x)
+
 for i in range(NUM_LUCKY_LOSERS):
     print("Peer ", tickets[i])
     print(peers[i])
