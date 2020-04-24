@@ -47,7 +47,7 @@ Peer  19
 LUCKY LOSERS:
 2020-04-22 12:00:08.182017
 Peer  170
-{'ip': '85.126.197.236:3414', 'first_seen': '1584868480096', 'last_seen': '1587546000075', 'user_agent': 'MW/Grin 3.1.1-beta.1', 'total_uptime': 1496, 'tries': 1601, 'average_uptime': 0.9344}
+Claiming ...{'ip': '85.126.197.236:3414', 'first_seen': '1584868480096', 'last_seen': '1587546000075', 'user_agent': 'MW/Grin 3.1.1-beta.1', 'total_uptime': 1496, 'tries': 1601, 'average_uptime': 0.9344}
 Peer  209
 {'ip': '109.74.202.16:3414', 'first_seen': '1584868480096', 'last_seen': '1587546000075', 'user_agent': 'MW/Grin 4.0.0-alpha.1', 'total_uptime': 1495, 'tries': 1601, 'average_uptime': 0.9338}
 Peer  462
