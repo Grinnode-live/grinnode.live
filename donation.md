@@ -15,7 +15,9 @@ GRIN Wallet-Server is not high-available, so if unreachable please contact me.
 Via BTC:
 
 Address: **3NYv5FZVHqYNvdSAUzTotfxmTaRaV8ugPw**
+
 P2WPKH: **bc1q7jp7jsa34mx5hfvmj2q4ujdx6w4flgv2dzx5prrvk3s0vc0zktgsl4rc6l**
+
 P2WSH: **bc1qcwfg83r3drp8szhkzy4wap7w868w6tttt46udf**
 
 
