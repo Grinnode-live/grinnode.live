@@ -4,6 +4,8 @@
 
 **Tor-Address**: cgodjue5g7ebqv3bgrt6sfwbvq4ricibnxjwkqimu2apbdyn7c752iyd.onion
 
+**Slatepack Address is:** grin1zxwrf5yaxlyps4mpx3n7j9kp4su3gzgpdhfk2sgv56q0prcdlzls9e6e0y
+
 **Grin++:** http://cgodjue5g7ebqv3bgrt6sfwbvq4ricibnxjwkqimu2apbdyn7c752iyd.grinplusplus.com/ 
 
 **HTTP-Sending**: http://wallet.grinnode.live:3415 
