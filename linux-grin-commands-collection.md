@@ -72,3 +72,13 @@ Get total inbound outbound number
 ```
 curl -d  '{"id":"json","method":"get_connected_peers","params":{} }' -o - https://grinnode.live/v2/owner  | jq ".result[] |.[]| {direction}"  |grep -c "Outbound" 
 ```
+-----------------------------------------
+
+### Get unconfirmed transactions 
+```
+curl  -d '{"id":"json","method":"get_unconfirmed_transactions","params":{} }' -o - https://grinnode.live/v2/foreign 
+```
+parsing it with
+```| jq -r '.result.Ok[] | "\(.tx.offset)\t\(.tx_at)\t\(.tx.body.kernels | length)\t\(.tx.body.inputs | length)\t\(.tx.body.outputs | length)"' ```
+
+
