@@ -137,7 +137,7 @@ We recommend to every users, if you received a transaction confirmed in a stale 
 The hashrate seems to now have stabilized at normal conditions. Community members detected the abnormalities and cautioned all exchanges and pools to increase the minimum required number of confirmations in light of this. As always, it is important to require high confirmations for large payments on any network.
 
 #### Community Vigilance
-The community will continue to stay vigilant to detect these events and make best efforts to protect the Grin ecosystem. Some Grin users, drastically increased the REORG cache of their running node which was by default set to 30 minutes. In case of future REORG, all transaction form honest users will be rebroadcasted directly at its end.
+The community will continue to stay vigilant to detect these events and make best efforts to protect the Grin ecosystem. Some Grin users, drastically increased the REORG cache time of their running node which was by default set to 30 minutes. In case of future REORG, all transaction frim honest users will be rebroadcasted directly at its end.
 
 We suggest every users to run their own Grin node (Grin-Node, Grin++) whenever possible (short time, long-term, does not matter), make sure your port 3414 is open if you wish to have inbound connections and not only outbound.
 
