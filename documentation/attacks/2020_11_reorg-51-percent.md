@@ -28,10 +28,10 @@ In the mid of 2020-11-07, at 22:40:42 UTC and 2020-11-08, at 02:27:17 UTC, an un
 #### Grin Hashrate increase
 Grin network hashrate has increased considerably 3 times, between 22:40:42 and 02:27:17 UTC . This coincides with the Nicehash rate doubling in this time with well over 50% of the network hashrate currently outside of known pools.
 
-Grin unknown miners and pools hashrate during the attack [1]	
+- Grin unknown miners and pools hashrate during the attack [1]	
 <img src="images/grin-mining-stats.png" alt="Grin unknown miners and pools hashrate pools Hashrate" width="600">
 
-Grin C29z and C32 hashrate chart correlated approximately to REORGs times 
+- Grin C29z and C32 hashrate chart correlated approximately to REORGs times 
 <img src="images/grin-hashrate-chart.png" alt="Grin Hashrate Chart with REORG" width="600">
 
 #### Nicehash C32 rate doubling
@@ -133,7 +133,7 @@ We recommend to every users, if you received a transaction confirmed in a stale 
 The hashrate seems to now have stabilized at normal conditions. Community members detected the abnormalities and cautioned all exchanges and pools to increase the minimum required number of confirmations in light of this. As always, it is important to require high confirmations for large payments on any network.
 
 #### Community Vigilance
-The community will continue to stay vigilant to detect these events and make best efforts to protect the Grin ecosystem. Some Grin users, drastically increased the REORG cache time of their running node which was by default set to 30 minutes. In case of future REORG, all transaction from honest users will be rebroadcasted directly at its end.
+The community will continue to stay vigilant to detect these events and make best efforts to protect the Grin ecosystem. Some Grin users, drastically increased the REORG txs pool cache time of their running node which was by default set to 30 minutes. In case of future REORG, all transaction from honest users will be rebroadcasted directly at its end.
 
 We suggest every users to run their own Grin node (Grin-Node, Grin++) whenever possible (short time, long-term, does not matter), make sure your port 3414 is open if you wish to have inbound connections and not only outbound.
 
