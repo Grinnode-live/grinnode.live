@@ -1,8 +1,131 @@
+# GRIN Double-Spend Attack - 2020/11/08
+
+In the mid of 2020-11-07, at 22:40:42 UTC and 2020-11-08, at 02:27:17 UTC, an unknown entity acquired enough hashpower to attempt 51% attacks on the Grin network. In this document, we will report the activity on the Grin network during this period of time and raise some possibilities to mitigate these attacks in the future. 
+
+## Contents
++ [Reported Network Activity](#Reported-Network-Activity)
+  + [Overview of the attack](#Overview-of-the-attack)
+    - [Grin Hashrate increase](#Grin-Hashrate-increase)
+    - [Nicehash C32 rate doubling](#Nicehash-C32-rate-doubling)
+    - [Details of the REORGs](#Details-of-the-REORGs)
+      * [1st REORG](#1st-REORG)
+      * [2nd REORG](#2nd-REORG)
+      * [3rd REORG](#3rd-REORG)
+    - [Honest Transaction in orphan blocks](#Honest-Transaction-in-orphan-blocks)
++ [Mitigations](#Mitigations)
+  + [Higher confirmations required](#Higher-confirmations-required)
+  + [Community Vigilance](Community-Vigilance)
+  + [Miners](#Miners)
+  + [ASICs](#ASICs)
+
+## Reported Network Activity
+
+### Overview of the attack
+
+#### Grin Hashrate increase
+Grin network hashrate has increased considerably 3 times, between 22:40:42 and 02:27:17 UTC . This coincides with the nicehash rate doubling in this time with well over 50% of the network hashrate currently outside of known pools.
+- Grin unknow miners and pools hashrate during the attack
+![grin-mining-stats](images/grin-mining-stats.png "Grin unknow miners and pools hashrate pools Hashrate") 
+
+- Grin C29z and C32 hashrate chart correlated approximatively to REORGs times 
+![grin-hashrate-chart](images/grin-hashrate-chart.png "Grin Hashrate Chart with REORG") 
+
+
+#### Nicehash C32 rate doubling
+As shown by [forkwartch.io](https://www.forkwatch.io/grincuckatoo32), we can see an anomaly in the nicehash cost with one huge spike during the attack, this result an abnormal average price of ~0.218 BTC/KGPS/DAY during the malicious Grin network hashrate increase, instead of the normal average price of ~0.13 BTC/KGPS/DAY.
+
+![forkwatch.io](images/forkwatch-c32-report.png "forkwatch.io c32 hashrate report") 
+
+#### Details of the REORGs
+
+> REORG (blockchain reorganization) : A built-in feature of the Grin network designed to deal with the issue of simultaneously mined blocks. 
+
+> REORG attack : A blockchain reorganization attack occurs when miners collaborate to remove previously confirmed blocks from the blockchain.
+
+> In order to realise a successful double-spend thanks to REORG attack, an entity needs to secretly mining a chain with his nodes (REORG attack) totalising 51% of the hashrate of the honest chain (future orphaned and stale blocks). The attacker will makes the same transaction on each chain, on the honest chain the transaction will be sent to the victim, this transaction will looks legit until the attacker propagates his secretly mined chain (REORG chain) where he self-spent his transaction (the same is sent to the victim), to all others honest nodes of the network. Usually, the attacker propagates the dishonest chain when the transaction has passed multiple confirmations, most of the time, this attack aims to complete the multiple confirmations system required to deposit on an exchange and after having released the secretly mined chain, get back the fund sent to the victim in his wallet, the attacker wallet.
 
 
 
--- 
-Links used in this analisis:
 
-[1] https://www.forkwatch.io/grincuckatoo32 - A Tool for Blockchain Security Monitoring
+Accordingly, to this net hashrate increase and nicehash rate doubling, it appears the entity successfully created large REORGs.
+In these REORGs, we could have seen the same entity double-spending one transaction at each REORG, we could possibly assume from that activity an attempt to realize a double-spend attack on exchange. 
 
+As results of this network activity, Grin nodes monitored by @mcmmike reported in total 3 large REORGs:
+
+##### 1st REORG
+
+- Between the block _949474_ and _949510_ - **REORG depth of 27 blocks**:
+
+	Start of the 1st REORG | End of the 1st REORG
+	------------ | -------------
+	[Block n°949474](https://grinexplorer.net/block/949474) | [Block n°949510](https://grinexplorer.net/block/949510)
+     
+
+	Malicious tx confirmed in REORG block| Malicious tx confirmed in orphaned block
+	------------ | -------------
+	[Confirmed in REORG Block n° 949493](https://grinscan.net/block/000261a48947f69bf38e4edf33b7efa18cd3ecd24a7a8699ec70ebe45e373768) | [Confirmed in orphaned Block n°949501](https://grinscan.net/block/0000ada472a31ed7b0054e16a565427e8ec8d36e8edae0f571c50c3bcab9ac51)
+	[Output n°1](https://grinscan.net/block/000261a48947f69bf38e4edf33b7efa18cd3ecd24a7a8699ec70ebe45e373768#o0) | [Output n°1](https://grinscan.net/block/0000ada472a31ed7b0054e16a565427e8ec8d36e8edae0f571c50c3bcab9ac51#o0)
+	[Output n°2](https://grinscan.net/block/000261a48947f69bf38e4edf33b7efa18cd3ecd24a7a8699ec70ebe45e373768#o1) | [Output n°2](https://grinscan.net/block/0000ada472a31ed7b0054e16a565427e8ec8d36e8edae0f571c50c3bcab9ac51#o1)
+	[Attacker's Txs Kernel in REORG block](https://grinscan.net/block/000261a48947f69bf38e4edf33b7efa18cd3ecd24a7a8699ec70ebe45e373768k0) | [Attacker's Txs Kernel in orphaned block](https://grinscan.net/block/0000ada472a31ed7b0054e16a565427e8ec8d36e8edae0f571c50c3bcab9ac51#k0)
+
+**Result of the 3rd REORG is a transaction double spent after 10 confirmations.**
+
+----
+
+##### 2nd REORG
+
+- Between the block _949636_ and _949678_ - **REORG depth of 43 blocks**:
+
+
+	Start of the 2nd REORG | End of the 2nd REORG
+	------------ | -------------
+	[Block n°949636](https://grinexplorer.net/block/949636) | [Block n°949678](https://grinexplorer.net/block/949678)
+      
+
+
+	Malicious tx confirmed in REORG block| Malicious tx confirmed in orphaned block
+	------------ | -------------
+	[Confirmed in REORG Block n° 949664](https://grinscan.net/block/0000a70697eaabc770ee771eaf15c433dcda183555cc5fb6688f13c543d88106) | [Confirmed in orphaned Block n°949670](https://grinscan.net/block/0002027a030163d06dd9127b798c6fff17e19204f7e1ebd415313ca712810d81)
+	[Output n°1](https://grinscan.net/block/0000a70697eaabc770ee771eaf15c433dcda183555cc5fb6688f13c543d88106#o0) | [Output n°1](https://grinscan.net/block/0002027a030163d06dd9127b798c6fff17e19204f7e1ebd415313ca712810d81#o0)
+	[Output n°2](https://grinscan.net/block/0000a70697eaabc770ee771eaf15c433dcda183555cc5fb6688f13c543d88106#o1) | [Output n°2](https://grinscan.net/block/0002027a030163d06dd9127b798c6fff17e19204f7e1ebd415313ca712810d81#o1)
+	[Attacker's Txs Kernel in REORG block](https://grinscan.net/block/0000a70697eaabc770ee771eaf15c433dcda183555cc5fb6688f13c543d88106#k0) | [Attacker's Txs Kernel in orphaned block](https://grinscan.net/block/0002027a030163d06dd9127b798c6fff17e19204f7e1ebd415313ca712810d81#k0)
+
+**Result of the 3rd REORG is a transaction double spent after 9 confirmations.**
+
+----
+
+##### 3rd REORG
+
+- Between the block _949715_ and _949737_ - **REORG depth of 23 blocks**:
+
+
+	Start of the 3rd  REORG | End of the 3rd REORG
+	------------ | -------------
+	[Block n°949715](https://grinexplorer.net/block/949715) | [Block n°949737](https://grinexplorer.net/block/949737)
+      
+
+
+	Malicious tx confirmed in REORG block| Malicious tx confirmed in orphaned block
+	------------ | -------------
+	[Confirmed in REORG Block n° 949718](https://grinscan.net/block/0000a70697eaabc770ee771eaf15c433dcda183555cc5fb6688f13c543d88106) | [Confirmed in orphaned Block n°949720](https://grinscan.net/block/0001170468d147e75492d9b1dbf3c8bee3869fa88c4f33508b7ddda3be0f2464)
+	[Output n°1](https://grinscan.net/block/00025b694866287b64b04f3e021a6800356b74313e8fee72f1788a1009fd11b5#o0) | [Output n°1](https://grinscan.net/block/0001170468d147e75492d9b1dbf3c8bee3869fa88c4f33508b7ddda3be0f2464#o3)
+	[Output n°2](https://grinscan.net/block/00025b694866287b64b04f3e021a6800356b74313e8fee72f1788a1009fd11b5#o1) | [Output n°2](https://grinscan.net/block/0001170468d147e75492d9b1dbf3c8bee3869fa88c4f33508b7ddda3be0f2464#o4)
+	[Attacker's Txs Kernel in REORG block](https://grinscan.net/block/0001170468d147e75492d9b1dbf3c8bee3869fa88c4f33508b7ddda3be0f2464#k0) | [Attacker's Txs Kernel in orphaned block](https://grinscan.net/block/0001170468d147e75492d9b1dbf3c8bee3869fa88c4f33508b7ddda3be0f2464#k3)
+
+**Result of the 3rd REORG is a transaction double spent after 18 confirmations.**
+
+### Honest Transaction in orphan blocks
+Honest transactions sent and confirmed in an orphaned block during the REORG, have been confirmed back once the concerned REORG ended. Only the transactions made by the attacker were double-spent.
+## Mitigations
+
+### Higher confirmations required
+The hashrate seems to now have stabilized at normal conditions. Community members detected the abnormalities and cautioned all exchanges and pools to increase the minimum required number of confirmations in light of this. As always, it is important to require high confirmations for large payments on any network.
+
+### Community Vigilance
+The community will continue to stay vigilant to detect these events and make best efforts to protect the Grin ecosystem. We suggest every users to run their own Grin node (Grin-Node, Grin++) whenever possible (short time, long-term, does not matter), make sure your port 3414 is open if you wish to have inbound connections and not only outbounds.
+
+### Miners
+If you have the possibility, mine with GPU in your launch - break / over night / 15 min a day / during coffee break. You will help to make the Grin network safer.
+
+### ASICs 
+We wish to see as soon as possible C32 ASICs in public sales, in order to have less hashing power influence from Nicehash. ASICs would help the network getting safer and Nicehash useless for any malicious attempts.
