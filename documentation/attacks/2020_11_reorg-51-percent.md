@@ -69,7 +69,7 @@ As results of this network activity, Grin-Nodes by [Grinnode.live](https://grinn
 	[Output n°2](https://grinscan.net/block/000261a48947f69bf38e4edf33b7efa18cd3ecd24a7a8699ec70ebe45e373768#o1) | [Output n°2](https://grinscan.net/block/0000ada472a31ed7b0054e16a565427e8ec8d36e8edae0f571c50c3bcab9ac51#o1)
 	[Attacker's Txs Kernel in REORG block](https://grinscan.net/block/000261a48947f69bf38e4edf33b7efa18cd3ecd24a7a8699ec70ebe45e373768k0) | [Attacker's Txs Kernel in orphaned block](https://grinscan.net/block/0000ada472a31ed7b0054e16a565427e8ec8d36e8edae0f571c50c3bcab9ac51#k0)
 
-**Result of the 3rd REORG is a transaction double spent after 10 confirmations.**
+**Result of the 1st REORG is a transaction double spent after 10 confirmations.**
 
 ----
 
@@ -91,7 +91,7 @@ As results of this network activity, Grin-Nodes by [Grinnode.live](https://grinn
 	[Output n°2](https://grinscan.net/block/0000a70697eaabc770ee771eaf15c433dcda183555cc5fb6688f13c543d88106#o1) | [Output n°2](https://grinscan.net/block/0002027a030163d06dd9127b798c6fff17e19204f7e1ebd415313ca712810d81#o1)
 	[Attacker's Txs Kernel in REORG block](https://grinscan.net/block/0000a70697eaabc770ee771eaf15c433dcda183555cc5fb6688f13c543d88106#k0) | [Attacker's Txs Kernel in orphaned block](https://grinscan.net/block/0002027a030163d06dd9127b798c6fff17e19204f7e1ebd415313ca712810d81#k0)
 
-**Result of the 3rd REORG is a transaction double spent after 9 confirmations.**
+**Result of the 2nd REORG is a transaction double spent after 9 confirmations.**
 
 ----
 
