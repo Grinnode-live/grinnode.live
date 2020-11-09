@@ -25,16 +25,16 @@ In the mid of 2020-11-07, at 22:40:42 UTC and 2020-11-08, at 02:27:17 UTC, an un
 #### Grin Hashrate increase
 Grin network hashrate has increased considerably 3 times, during this period of time. This coincides with the nicehash rate doubling in this time with well over 50% of the network hashrate currently outside of known pools.
 - GRIN unknow miners and pools hashrate during the attack
-![grin-mining-stats](../images/grin-mining-stats.png "GRIN unknow miners and pools hashrate pools Hashrate") 
+![grin-mining-stats](../../images/grin-mining-stats.png "GRIN unknow miners and pools hashrate pools Hashrate") 
 
 - Approximation with GRIN C29z and C32 hashrate chart the day of 3 REORG
-![grin-hashrate-chart](../images/grin-hashrate-chart.png "GRIN Hashrate Chart with REORG") 
+![grin-hashrate-chart](../../images/grin-hashrate-chart.png "GRIN Hashrate Chart with REORG") 
 
 
 #### Nicehash C32 rate doubling
 As shown by [forkwartch.io](https://www.forkwatch.io/grincuckatoo32), we can see an anomaly in the nicehash cost with one huge spike during the attack, this result an abnormal average price of ~0.218 BTC/KGPS/DAY during the malicious grin network hashrate increase, instead of the normal price average of ~0.13 BTC/KGPS/DAY.
 
-![forkwatch.io](../images/forkwatch-c32-report.png "forkwatch.io c32 hashrate report") 
+![forkwatch.io](../../images/forkwatch-c32-report.png "forkwatch.io c32 hashrate report") 
 
 #### Details of the REORGs
 
