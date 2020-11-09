@@ -41,15 +41,14 @@ In the data provided [forkwartch.io](https://www.forkwatch.io/grincuckatoo32), w
 
 #### REORGs/51% attacks
 
-	- _REORG attack_: A blockchain reorganization attack occurs when miners collaborate to remove previously confirmed blocks from the blockchain, by providing the network with a new blockchain of higher cumulative difficulty, achieved by having majority hashrate. [2][3]
+- _REORG attack_: A blockchain reorganization attack occurs when miners collaborate to remove previously confirmed blocks from the blockchain, by providing the network with a new blockchain of higher cumulative difficulty, achieved by having majority hashrate. [2][3]
 
- 	- _Orphan block_ :  Not part of the longest valid chain, and the parent of the orphan block is unknown. [4]
+ - _Orphan block_ :  Not part of the longest valid chain, and the parent of the orphan block is unknown. [4]
 	
-	- _Stale block_ : Well-formed block which is no longer part of the longest (difficulty-wise) and well-formed blockchain. [5]
+- _Stale block_ : Well-formed block which is no longer part of the longest (difficulty-wise) and well-formed blockchain. [5]
 
 In order to achieve a successful double-spend along with a REORG attack, an entity needs to secretly mine a seperate fork of the chain with majority hashrate (graph rate), thus superceding the honest blockchain in difficulty (future orphaned and stale blocks). The attacker creates a transaction on each chain; On the honest chain, the transaction will be sent to the victim and will look legit, until the attacker propagates his secretly mined chain, the REORG chain, in which he self-spent that same transaction. The self-spend in the REORG chain will be considered legit by all honest nodes, following the 'most cumulative difficulty' rule. Usually, the attacker propagates the dishonest chain when the transaction has passed multiple confirmations. This attack aims to circumvent the multiple confirmations system required to deposit on an exchange. After having released the secretly mined chain, the attacker essentially gets back the funds originally sent to the victim in his wallet.
 	
-	-
 	
 Accordingly, this net hashrate increase and Nicehash rate doubling suggest successfully created large REORGs. As results of this network activity, Grin-Nodes by [Grinnode.live](https://grinnode.live/) indeed reported on REORGs. These Grin-Nodes are part of the "Reorg Monitoring-System" run by [Grinnode.live Infrastructure ](https://github.com/MCM-Mike/grinnode.live#infrastructure-grinnodelive).
 
