@@ -1,11 +1,10 @@
 #### Grin Hashrate increase
 Grin network hashrate has increased considerably 3 times, between 22:40:42 and 02:27:17 UTC . This coincides with the Nicehash rate doubling in this time with well over 50% of the network hashrate currently outside of known pools.
 - Grin unknown miners and pools hashrate during the attack
-<img src="images/grin-mining-stats.png" width="150"> 
-![grin-mining-stats](images/grin-mining-stats.png "Grin unknown miners and pools hashrate pools Hashrate")
+<img src="images/grin-mining-stats.png" alt="Grin unknown miners and pools hashrate pools Hashrate" width="350"> 
 
 - Grin C29z and C32 hashrate chart correlated approximately to REORGs times 
-![grin-hashrate-chart](images/grin-hashrate-chart.png "Grin Hashrate Chart with REORG") {width: 100px;} 
+<img src="images/grin-hashrate-chart.png" alt="Grin Hashrate Chart with REORG"> 
 
 
 #### Nicehash C32 rate doubling
