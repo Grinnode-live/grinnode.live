@@ -1,4 +1,4 @@
-# GRIN Double-Spend Attack - 2020/11/08
+# GRIN REORG Attack - 2020/11/08
 
 In the mid of 2020-11-07, at 22:40:42 UTC and 2020-11-08, at 02:27:17 UTC, an unknown entity acquired enough hash-power to attempt 51% attacks on the Grin network. In this document, we will report the activity on the Grin network during this period of time and raise some possibilities to mitigate these attacks in the future. 
 
@@ -11,13 +11,15 @@ In the mid of 2020-11-07, at 22:40:42 UTC and 2020-11-08, at 02:27:17 UTC, an un
       * [1st REORG](#1st-REORG)
       * [2nd REORG](#2nd-REORG)
       * [3rd REORG](#3rd-REORG)
-    - [Honest Transaction in orphan blocks](#Honest-Transaction-in-orphan-blocks)
+    - [Honest Transaction in stale/orphan blocks](#Honest-Transaction-in-staleorphan-blocks)
 + [Mitigations](#Mitigations)
   + [Higher confirmations required](#Higher-confirmations-required)
   + [Community Vigilance](Community-Vigilance)
   + [Miners](#Miners)
   + [ASICs](#ASICs)
 + [Contact](#Contact)
++ [Sources](#Sources)
++ [Credits](#Credits)
 
 ## Reported Network Activity
 
@@ -25,7 +27,7 @@ In the mid of 2020-11-07, at 22:40:42 UTC and 2020-11-08, at 02:27:17 UTC, an un
 
 #### Grin Hashrate increase
 Grin network hashrate has increased considerably 3 times, between 22:40:42 and 02:27:17 UTC . This coincides with the Nicehash rate doubling in this time with well over 50% of the network hashrate currently outside of known pools.
-- Grin unknown miners and pools hashrate during the attack
+- Grin unknown miners and pools hashrate during the attack [1]
 ![grin-mining-stats](images/grin-mining-stats.png "Grin unknown miners and pools hashrate pools Hashrate") 
 
 - Grin C29z and C32 hashrate chart correlated approximately to REORGs times 
@@ -39,16 +41,20 @@ As shown by [forkwartch.io](https://www.forkwatch.io/grincuckatoo32), we can see
 
 #### Details of the REORGs
 
-> REORG (blockchain reorganization) : A built-in feature of the Grin network designed to deal with the issue of simultaneously mined blocks. 
-
-> REORG attack : A blockchain reorganization attack occurs when miners collaborate to remove previously confirmed blocks from the blockchain.
 
 > In order to realise a successful double-spend thanks to REORG attack, an entity needs to secretly mining a chain with his nodes (REORG attack) totaling 51% of the hashrate of the honest chain (future orphaned and stale blocks). The attacker will makes the same transaction on each chain, on the honest chain the transaction will be sent to the victim, this transaction will looks legit until the attacker propagates his secretly mined chain (REORG chain) where he self-spent his transaction (the same is sent to the victim), to all others honest nodes of the network. Usually, the attacker propagates the dishonest chain when the transaction has passed multiple confirmations, most of the time, this attack aims to complete the multiple confirmations system required to deposit on an exchange and after having released the secretly mined chain, get back the fund sent to the victim in his wallet, the attacker wallet.
 
 
+- Definitions of some terms :
+	- REORG : The term "blockchain reorganization" (REORG) is used to refer to the situation where a client discovers a new difficultywise-longest well-formed blockchain which excludes one or more blocks that the client previously thought were part of the difficultywise-longest well-formed blockchain. These excluded blocks become orphans. [2]
 
-
-Accordingly, to this net hashrate increase and nicehash rate doubling, it appears the entity successfully created large REORGs.
+	- REORG attack : A blockchain reorganization attack occurs when miners collaborate to remove previously confirmed blocks from the blockchain. [3]
+	
+	- Orphan block :  Not part of the longest valid chain, and the parent of the orphan block is unknown. [4]
+	
+	- Stale block : Well-formed block which is no longer part of the difficultywise-longest and well-formed blockchain [5]
+	
+Accordingly to this net hashrate increase and nicehash rate doubling, it appears the entity successfully created large REORGs.
 In these REORGs, we could have seen the same entity double-spending one transaction at each REORG, we could possibly assume from that activity an attempt to realize a double-spend attack on exchange. 
 
 As results of this network activity, Grin-Nodes by [Grinnode.live](https://grinnode.live/) reported REORGs. These Grin-Nodes are part of the "Reorg Monitoring-System" run by [Grinnode.live Infrastructure ](https://github.com/MCM-Mike/grinnode.live#infrastructure-grinnodelive) :
@@ -62,14 +68,14 @@ As results of this network activity, Grin-Nodes by [Grinnode.live](https://grinn
 	[Block n°949474](https://grinexplorer.net/block/949474) | [Block n°949510](https://grinexplorer.net/block/949510)
      
 
-	Malicious tx confirmed in REORG block| Malicious tx confirmed in orphaned block
+	Malicious tx confirmed in REORG block| Malicious tx confirmed in stale block
 	------------ | -------------
-	[Confirmed in REORG Block n° 949493](https://grinscan.net/block/000261a48947f69bf38e4edf33b7efa18cd3ecd24a7a8699ec70ebe45e373768) | [Confirmed in orphaned Block n°949501](https://grinscan.net/block/0000ada472a31ed7b0054e16a565427e8ec8d36e8edae0f571c50c3bcab9ac51)
+	[Confirmed in REORG Block n° 949493](https://grinscan.net/block/000261a48947f69bf38e4edf33b7efa18cd3ecd24a7a8699ec70ebe45e373768) | [Confirmed in stale Block n°949501](https://grinscan.net/block/0000ada472a31ed7b0054e16a565427e8ec8d36e8edae0f571c50c3bcab9ac51)
 	[Output n°1](https://grinscan.net/block/000261a48947f69bf38e4edf33b7efa18cd3ecd24a7a8699ec70ebe45e373768#o0) | [Output n°1](https://grinscan.net/block/0000ada472a31ed7b0054e16a565427e8ec8d36e8edae0f571c50c3bcab9ac51#o0)
 	[Output n°2](https://grinscan.net/block/000261a48947f69bf38e4edf33b7efa18cd3ecd24a7a8699ec70ebe45e373768#o1) | [Output n°2](https://grinscan.net/block/0000ada472a31ed7b0054e16a565427e8ec8d36e8edae0f571c50c3bcab9ac51#o1)
-	[Attacker's Txs Kernel in REORG block](https://grinscan.net/block/000261a48947f69bf38e4edf33b7efa18cd3ecd24a7a8699ec70ebe45e373768k0) | [Attacker's Txs Kernel in orphaned block](https://grinscan.net/block/0000ada472a31ed7b0054e16a565427e8ec8d36e8edae0f571c50c3bcab9ac51#k0)
+	[Attacker's Txs Kernel in REORG block](https://grinscan.net/block/000261a48947f69bf38e4edf33b7efa18cd3ecd24a7a8699ec70ebe45e373768k0) | [Attacker's Txs Kernel in stale block](https://grinscan.net/block/0000ada472a31ed7b0054e16a565427e8ec8d36e8edae0f571c50c3bcab9ac51#k0)
 
-**Result of the 1st REORG is a transaction double spent after 10 confirmations.**
+**Result of the 1st REORG is a transaction double-spent after 10 confirmations.**
 
 ----
 
@@ -84,14 +90,14 @@ As results of this network activity, Grin-Nodes by [Grinnode.live](https://grinn
       
 
 
-	Malicious tx confirmed in REORG block| Malicious tx confirmed in orphaned block
+	Malicious tx confirmed in REORG block| Malicious tx confirmed in stale block
 	------------ | -------------
 	[Confirmed in REORG Block n° 949664](https://grinscan.net/block/0000a70697eaabc770ee771eaf15c433dcda183555cc5fb6688f13c543d88106) | [Confirmed in orphaned Block n°949670](https://grinscan.net/block/0002027a030163d06dd9127b798c6fff17e19204f7e1ebd415313ca712810d81)
 	[Output n°1](https://grinscan.net/block/0000a70697eaabc770ee771eaf15c433dcda183555cc5fb6688f13c543d88106#o0) | [Output n°1](https://grinscan.net/block/0002027a030163d06dd9127b798c6fff17e19204f7e1ebd415313ca712810d81#o0)
 	[Output n°2](https://grinscan.net/block/0000a70697eaabc770ee771eaf15c433dcda183555cc5fb6688f13c543d88106#o1) | [Output n°2](https://grinscan.net/block/0002027a030163d06dd9127b798c6fff17e19204f7e1ebd415313ca712810d81#o1)
-	[Attacker's Txs Kernel in REORG block](https://grinscan.net/block/0000a70697eaabc770ee771eaf15c433dcda183555cc5fb6688f13c543d88106#k0) | [Attacker's Txs Kernel in orphaned block](https://grinscan.net/block/0002027a030163d06dd9127b798c6fff17e19204f7e1ebd415313ca712810d81#k0)
+	[Attacker's Txs Kernel in REORG block](https://grinscan.net/block/0000a70697eaabc770ee771eaf15c433dcda183555cc5fb6688f13c543d88106#k0) | [Attacker's Txs Kernel in stale block](https://grinscan.net/block/0002027a030163d06dd9127b798c6fff17e19204f7e1ebd415313ca712810d81#k0)
 
-**Result of the 2nd REORG is a transaction double spent after 9 confirmations.**
+**Result of the 2nd REORG is a transaction double-spent after 9 confirmations.**
 
 ----
 
@@ -106,17 +112,17 @@ As results of this network activity, Grin-Nodes by [Grinnode.live](https://grinn
       
 
 
-	Malicious tx confirmed in REORG block| Malicious tx confirmed in orphaned block
+	Malicious tx confirmed in REORG block| Malicious tx confirmed in stale block
 	------------ | -------------
-	[Confirmed in REORG Block n° 949718](https://grinscan.net/block/0000a70697eaabc770ee771eaf15c433dcda183555cc5fb6688f13c543d88106) | [Confirmed in orphaned Block n°949720](https://grinscan.net/block/0001170468d147e75492d9b1dbf3c8bee3869fa88c4f33508b7ddda3be0f2464)
+	[Confirmed in REORG Block n° 949718](https://grinscan.net/block/0000a70697eaabc770ee771eaf15c433dcda183555cc5fb6688f13c543d88106) | [Confirmed in stale Block n°949720](https://grinscan.net/block/0001170468d147e75492d9b1dbf3c8bee3869fa88c4f33508b7ddda3be0f2464)
 	[Output n°1](https://grinscan.net/block/00025b694866287b64b04f3e021a6800356b74313e8fee72f1788a1009fd11b5#o0) | [Output n°1](https://grinscan.net/block/0001170468d147e75492d9b1dbf3c8bee3869fa88c4f33508b7ddda3be0f2464#o3)
 	[Output n°2](https://grinscan.net/block/00025b694866287b64b04f3e021a6800356b74313e8fee72f1788a1009fd11b5#o1) | [Output n°2](https://grinscan.net/block/0001170468d147e75492d9b1dbf3c8bee3869fa88c4f33508b7ddda3be0f2464#o4)
-	[Attacker's Txs Kernel in REORG block](https://grinscan.net/block/0001170468d147e75492d9b1dbf3c8bee3869fa88c4f33508b7ddda3be0f2464#k0) | [Attacker's Txs Kernel in orphaned block](https://grinscan.net/block/0001170468d147e75492d9b1dbf3c8bee3869fa88c4f33508b7ddda3be0f2464#k3)
+	[Attacker's Txs Kernel in REORG block](https://grinscan.net/block/0001170468d147e75492d9b1dbf3c8bee3869fa88c4f33508b7ddda3be0f2464#k0) | [Attacker's Txs Kernel in stale  block](https://grinscan.net/block/0001170468d147e75492d9b1dbf3c8bee3869fa88c4f33508b7ddda3be0f2464#k3)
 
-**Result of the 3rd REORG is a transaction double spent after 18 confirmations.**
+**Result of the 3rd REORG is a transaction double-spent after 18 confirmations.**
 
-### Honest Transaction in orphan blocks
-Honest transactions sent and confirmed in an orphaned block during the REORG, have been confirmed back once the concerned REORG ended. Only the transactions made by the attacker were double-spent.
+### Honest Transaction in stale/orphan blocks
+Honest transactions sent and confirmed in stale/orphaned block during the REORG, have been confirmed back once the concerned REORG ended. Only the transactions made by the attacker were double-spent.
 ## Mitigations
 
 ### Higher confirmations required
@@ -133,6 +139,14 @@ We wish to see as soon as possible C32 ASICs in public sales, in order to have l
 
 ## Contact
 If you need to contact us: https://github.com/MCM-Mike/grinnode.live/blob/master/contact.md 
+
+### Sources
+
+  - [1] : https://twitter.com/pool2miners/status/1325277809183510529
+  - [2] : https://en.bitcoin.it/wiki/Chain_Reorganization
+  - [3] : https://blog.honeyminer.com/whats-a-blockchain-reorg/
+  - [4] : https://en.bitcoin.it/wiki/Orphan_Block
+  - [5] : https://en.bitcoin.it/wiki/Vocabulary#Stale_Block
 
 ### Credits
 This report was also written by `deeev` (Keybase) 
