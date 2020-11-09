@@ -1,6 +1,6 @@
 # GRIN REORG Attack - 2020/11/08
 
-In the mid of 2020-11-07, at 22:40:42 UTC and 2020-11-08, at 02:27:17 UTC, an unknown entity acquired enough hash-power to attempt 51% attacks on the Grin network. In this document, we will report the activity on the Grin network during this period of time and raise some possibilities to mitigate these attacks in the future. 
+In the mid of 2020-11-07, at 22:40:42 UTC and 2020-11-08, at 02:27:17 UTC, an unknown entity acquired enough hash-power to perform 51% attacks on the Grin network. In this document, we will report the activity on the Grin network during this period of time and raise some possibilities to mitigate these attacks in the future. 
 
 ## Contents
 + [Reported Network Activity](#Reported-Network-Activity)
