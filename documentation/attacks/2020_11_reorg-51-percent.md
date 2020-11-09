@@ -122,7 +122,12 @@ As results of this network activity, Grin-Nodes by [Grinnode.live](https://grinn
 **Result of the 3rd REORG is a transaction double-spent after 18 confirmations.**
 
 ### Honest Transaction in stale/orphan blocks
-Honest transactions sent and confirmed in stale/orphaned block during the REORG, have been confirmed back once the concerned REORG ended. Only the transactions made by the attacker were double-spent.
+Honest transactions sent and confirmed in stale/orphaned block during the REORG :
+- some have been confirmed back once the concerned REORG ended.
+- some others never been replayed in the main chain after the REORG. 
+
+We recommend to every users, if you received a transaction confirmed in a stale block which was canceled after one the of the REORG, to check if it's still confirmed. You might seen the transaction amount in the unconfirmed balance. If that's the case, you should contact the sender of the transaction in order to redo the transaction.
+
 ## Mitigations
 
 ### Higher confirmations required
