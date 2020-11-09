@@ -15,11 +15,15 @@ In the data provided by [forkwartch.io](https://www.forkwatch.io/grincuckatoo32)
 
 ### Details of the REORGs
 
-> REORG (blockchain reorganization) : A built-in feature of the Grin network designed to deal with the issue of simultaneously mined blocks. 
+
+[details="REORG attacks"]
+
+> REORG attack : A blockchain reorganization attack occurs when miners collaborate to remove previously confirmed blocks from the blockchain, by providing the network with a new blockchain of higher cumulative difficulty, achieved by having majority hashrate.
 >
-> REORG attack : A blockchain reorganization attack occurs when miners collaborate to remove previously confirmed blocks from the blockchain.
->
-> In order to achieve a successful double-spend thanks to REORG attack, an entity needs to secretly mine a chain, totaling 51% of the honest hashrate (future orphaned and stale blocks). The attacker will makes the same transaction on each chain, on the honest chain the transaction will be sent to the victim, this transaction will look legit until the attacker propagates his secretly mined chain, the REORG chain, in which he self-spent his transaction (the same as was sent to the victim), to all others honest nodes of the network. Usually, the attacker propagates the dishonest chain when the transaction has passed multiple confirmations, most of the time, this attack aims to complete the multiple confirmations system required to deposit on an exchange and after having released the secretly mined chain, get back the fund sent to the victim in his wallet, the attacker wallet.
+> In order to achieve a successful double-spend along with a REORG attack, an entity needs to secretly mine a seperate fork of the chain with majority hashrate (graph rate), thus superceding the honest blockchain in difficulty (future orphaned and stale blocks). The attacker creates a transaction on each chain; On the honest chain, the transaction will be sent to the victim and will look legit, until the attacker propagates his secretly mined chain, the REORG chain, in which he self-spent that same transaction. The self-spend in the REORG chain will be considered legit by all honest nodes, following the 'most cumulative difficulty' rule. Usually, the attacker propagates the dishonest chain when the transaction has passed multiple confirmations. This attack aims to circumvent the multiple confirmations system required to deposit on an exchange. After having released the secretly mined chain, the attacker essentially gets back the funds originally sent to the victim in his wallet.
+[/details]
+
+
 
 
 
