@@ -1,6 +1,6 @@
 # GRIN REORG Attack - 2020/11/08
 
-In the mid of 2020-11-07, at 22:40:42 UTC and 2020-11-08, at 02:27:17 UTC, an unknown entity acquired enough hash-power to perform 51% attacks on the Grin network. In this document, we will report the activity on the Grin network during this period of time and raise some possibilities to mitigate these attacks in the future. 
+On 2020-11-07, 22:40:42 UTC and on 2020-11-08, 02:27:17 UTC, an unknown entity successfully acquired majority mining power, enough to perform 51% attacks on the Grin network. In this document we report on the network activity during the event and consequently suggestions to mitigate this kind of attacks in the future. 
 
 ## Contents
 + [Reported Network Activity](#Reported-Network-Activity)
@@ -26,7 +26,7 @@ In the mid of 2020-11-07, at 22:40:42 UTC and 2020-11-08, at 02:27:17 UTC, an un
 ### Overview of the attack
 
 #### Grin Hashrate increase
-Grin network hashrate has increased considerably 3 times, between 22:40:42 and 02:27:17 UTC . This coincides with the Nicehash rate doubling in this time with well over 50% of the network hashrate currently outside of known pools.
+Grin network hashrate saw a considerable increase 3 times, between 22:40:42 and 02:27:17 UTC. This coincides with the Nicehash rate doubling in this time, with well over 50% of the network hashrate outside of known pools.
 
 - Grin unknown miners and pools hashrate during the attack [1]	
 <img src="images/grin-mining-stats.png" alt="Grin unknown miners and pools hashrate pools Hashrate" width="600">
@@ -35,24 +35,21 @@ Grin network hashrate has increased considerably 3 times, between 22:40:42 and 0
 <img src="images/grin-hashrate-chart.png" alt="Grin Hashrate Chart with REORG" width="600">
 
 #### Nicehash C32 rate doubling
-As shown by [forkwartch.io](https://www.forkwatch.io/grincuckatoo32), we can see an anomaly in the Nicehash cost with one huge spike during the attack, this result an abnormal average price of ~0.218 BTC/KGPS/DAY during the malicious Grin network hashrate increase, instead of the normal average price of ~0.13 BTC/KGPS/DAY.
+In the data provided [forkwartch.io](https://www.forkwatch.io/grincuckatoo32), we spot an anomaly in the Nicehash cost, seeing a huge spike during the attack, resulting in an abnormal average price of ~0.218 BTC/KGPS/DAY during the malicious hashrate increase, instead of the normal average price of ~0.13 BTC/KGPS/DAY.
 
 ![forkwatch.io](images/forkwatch-c32-report.png "forkwatch.io c32 hashrate report") 
 
-#### Details of the REORGs
+#### REORGs/51% attacks
 
+	- _REORG attack_: A blockchain reorganization attack occurs when miners collaborate to remove previously confirmed blocks from the blockchain, by providing the network with a new blockchain of higher cumulative difficulty, achieved by having majority hashrate. [2][3]
 
-> In order to achieve a successful double-spend along with a REORG attack, an entity needs to secretly mine a seperate fork of the chain with majority hashrate (graph rate), thus superceding the honest blockchain in difficulty (future orphaned and stale blocks). The attacker creates a transaction on each chain; On the honest chain, the transaction will be sent to the victim and will look legit, until the attacker propagates his secretly mined chain, the REORG chain, in which he self-spent that same transaction. The self-spend in the REORG chain will be considered legit by all honest nodes, following the 'most cumulative difficulty' rule. Usually, the attacker propagates the dishonest chain when the transaction has passed multiple confirmations. This attack aims to circumvent the multiple confirmations system required to deposit on an exchange. After having released the secretly mined chain, the attacker essentially gets back the funds originally sent to the victim in his wallet.
-
-
-- **Definitions of some terms** :
-	- _REORG attack_ : A blockchain reorganization attack occurs when miners collaborate to remove previously confirmed blocks from the blockchain, by providing the network with a new blockchain of higher cumulative difficulty, achieved by having majority hashrate. [2]
-
-	- _REORG attack_ : A blockchain reorganization attack occurs when miners collaborate to remove previously confirmed blocks from the blockchain. [3]
+ 	- _Orphan block_ :  Not part of the longest valid chain, and the parent of the orphan block is unknown. [4]
 	
-	- _Orphan block_ :  Not part of the longest valid chain, and the parent of the orphan block is unknown. [4]
+	- _Stale block_ : Well-formed block which is no longer part of the longest (difficulty-wise) and well-formed blockchain. [5]
+
+In order to achieve a successful double-spend along with a REORG attack, an entity needs to secretly mine a seperate fork of the chain with majority hashrate (graph rate), thus superceding the honest blockchain in difficulty (future orphaned and stale blocks). The attacker creates a transaction on each chain; On the honest chain, the transaction will be sent to the victim and will look legit, until the attacker propagates his secretly mined chain, the REORG chain, in which he self-spent that same transaction. The self-spend in the REORG chain will be considered legit by all honest nodes, following the 'most cumulative difficulty' rule. Usually, the attacker propagates the dishonest chain when the transaction has passed multiple confirmations. This attack aims to circumvent the multiple confirmations system required to deposit on an exchange. After having released the secretly mined chain, the attacker essentially gets back the funds originally sent to the victim in his wallet.
 	
-	- _Stale block_ : Well-formed block which is no longer part of the difficultywise-longest and well-formed blockchain [5]
+	-
 	
 Accordingly, this net hashrate increase and Nicehash rate doubling suggest successfully created large REORGs. As results of this network activity, Grin-Nodes by [Grinnode.live](https://grinnode.live/) indeed reported on REORGs. These Grin-Nodes are part of the "Reorg Monitoring-System" run by [Grinnode.live Infrastructure ](https://github.com/MCM-Mike/grinnode.live#infrastructure-grinnodelive).
 
