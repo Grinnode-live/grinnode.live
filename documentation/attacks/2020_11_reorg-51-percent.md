@@ -54,7 +54,7 @@ As shown by [forkwartch.io](https://www.forkwatch.io/grincuckatoo32), we can see
 	
 	- _Stale block_ : Well-formed block which is no longer part of the difficultywise-longest and well-formed blockchain [5]
 	
-Accordingly, this net hashrate increase and Nicehash rate doubling suggest successfully created large REORGs. As results of this network activity, Grin-Nodes by [Grinnode.live](https://grinnode.live/) indeed reported on REORGs. These Grin-Nodes are part of the "Reorg Monitoring-System" run by [Grinnode.live Infrastructure ](https://github.com/MCM-Mike/grinnode.live#infrastructure-grinnodelive).
+Accordingly, this net hashrate increase and Nicehash rate doubling suggest an entity successfully created large REORGs. As results of this network activity, Grin-Nodes by [Grinnode.live](https://grinnode.live/) indeed reported on REORGs. These Grin-Nodes are part of the "Reorg Monitoring-System" run by [Grinnode.live Infrastructure ](https://github.com/MCM-Mike/grinnode.live#infrastructure-grinnodelive).
 
 In these REORGs, we see the same entity spending one transaction at each REORG, indicating an attempt to realize a double-spend attack, likely on an exchange. 
 
@@ -91,7 +91,7 @@ In these REORGs, we see the same entity spending one transaction at each REORG, 
 
 	Malicious tx confirmed in REORG block| Malicious tx confirmed in stale block
 	------------ | -------------
-	[Confirmed in REORG Block n° 949664](https://grinscan.net/block/0000a70697eaabc770ee771eaf15c433dcda183555cc5fb6688f13c543d88106) | [Confirmed in orphaned Block n°949670](https://grinscan.net/block/0002027a030163d06dd9127b798c6fff17e19204f7e1ebd415313ca712810d81)
+	[Confirmed in REORG Block n° 949664](https://grinscan.net/block/0000a70697eaabc770ee771eaf15c433dcda183555cc5fb6688f13c543d88106) | [Confirmed in stale Block n°949670](https://grinscan.net/block/0002027a030163d06dd9127b798c6fff17e19204f7e1ebd415313ca712810d81)
 	[Output n°1](https://grinscan.net/block/0000a70697eaabc770ee771eaf15c433dcda183555cc5fb6688f13c543d88106#o0) | [Output n°1](https://grinscan.net/block/0002027a030163d06dd9127b798c6fff17e19204f7e1ebd415313ca712810d81#o0)
 	[Output n°2](https://grinscan.net/block/0000a70697eaabc770ee771eaf15c433dcda183555cc5fb6688f13c543d88106#o1) | [Output n°2](https://grinscan.net/block/0002027a030163d06dd9127b798c6fff17e19204f7e1ebd415313ca712810d81#o1)
 	[Attacker's Txs Kernel in REORG block](https://grinscan.net/block/0000a70697eaabc770ee771eaf15c433dcda183555cc5fb6688f13c543d88106#k0) | [Attacker's Txs Kernel in stale block](https://grinscan.net/block/0002027a030163d06dd9127b798c6fff17e19204f7e1ebd415313ca712810d81#k0)
@@ -133,7 +133,7 @@ We recommend to every users, if you received a transaction confirmed in a stale 
 The hashrate seems to now have stabilized at normal conditions. Community members detected the abnormalities and cautioned all exchanges and pools to increase the minimum required number of confirmations in light of this. As always, it is important to require high confirmations for large payments on any network.
 
 #### Community Vigilance
-The community will continue to stay vigilant to detect these events and make best efforts to protect the Grin ecosystem. Some Grin users, drastically increased the REORG txs pool cache time of their running node which was by default set to 30 minutes. In case of future REORG, all transaction from honest users will be rebroadcasted directly at its end.
+The community will continue to stay vigilant to detect these events and make best efforts to protect the Grin ecosystem. Some Grin users, drastically increased the REORG transactions cache time of their running node which was by default set to 30 minutes. In case of future REORG, all transaction from honest users will be rebroadcasted directly at its end.
 
 We suggest every users to run their own Grin node (Grin-Node, Grin++) whenever possible (short time, long-term, does not matter), make sure your port 3414 is open if you wish to have inbound connections and not only outbound.
 
