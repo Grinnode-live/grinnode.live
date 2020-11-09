@@ -50,9 +50,9 @@ In the data provided [forkwartch.io](https://www.forkwatch.io/grincuckatoo32), w
 In order to achieve a successful double-spend along with a REORG attack, an entity needs to secretly mine a seperate fork of the chain with majority hashrate (graph rate), thus superceding the honest blockchain in difficulty (future orphaned and stale blocks). The attacker creates a transaction on each chain; On the honest chain, the transaction will be sent to the victim and will look legit, until the attacker propagates his secretly mined chain, the REORG chain, in which he self-spent that same transaction. The self-spend in the REORG chain will be considered legit by all honest nodes, following the 'most cumulative difficulty' rule. Usually, the attacker propagates the dishonest chain when the transaction has passed multiple confirmations. This attack aims to circumvent the multiple confirmations system required to deposit on an exchange. After having released the secretly mined chain, the attacker essentially gets back the funds originally sent to the victim in his wallet.
 	
 	
-Accordingly, this net hashrate increase and Nicehash rate doubling suggest successfully created large REORGs. As results of this network activity, Grin-Nodes by [Grinnode.live](https://grinnode.live/) indeed reported on REORGs. These Grin-Nodes are part of the "Reorg Monitoring-System" run by [Grinnode.live Infrastructure ](https://github.com/MCM-Mike/grinnode.live#infrastructure-grinnodelive).
+Accordingly, this net hashrate increase and Nicehash rate doubling suggest successfully created large REORGs. As a result of this network activity, Grin-Nodes, run by [Grinnode.live](https://grinnode.live/) and a part of the "Reorg Monitoring-System" run by [Grinnode.live Infrastructure ](https://github.com/MCM-Mike/grinnode.live#infrastructure-grinnodelive), have indeed reported on REORGs.
 
-In these REORGs, we see the same entity spending one transaction at each REORG, indicating an attempt to realize a double-spend attack, likely on an exchange. 
+In these REORGs, we see the same entity spending the same input on each seperate chains, indicating an attempt to realize a double-spend attack, most likely on an exchange. 
 
 ##### 1st REORG
 
@@ -63,12 +63,12 @@ In these REORGs, we see the same entity spending one transaction at each REORG, 
 	[Block n°949474](https://grinexplorer.net/block/949474) | [Block n°949510](https://grinexplorer.net/block/949510)
      
 
-	Malicious tx confirmed in REORG block| Malicious tx confirmed in stale block
+	Malicious tx confirmed in stale block | Malicious tx confirmed in REORG block
 	------------ | -------------
-	[Confirmed in REORG Block n° 949493](https://grinscan.net/block/000261a48947f69bf38e4edf33b7efa18cd3ecd24a7a8699ec70ebe45e373768) | [Confirmed in stale Block n°949501](https://grinscan.net/block/0000ada472a31ed7b0054e16a565427e8ec8d36e8edae0f571c50c3bcab9ac51)
-	[Output n°1](https://grinscan.net/block/000261a48947f69bf38e4edf33b7efa18cd3ecd24a7a8699ec70ebe45e373768#o0) | [Output n°1](https://grinscan.net/block/0000ada472a31ed7b0054e16a565427e8ec8d36e8edae0f571c50c3bcab9ac51#o0)
-	[Output n°2](https://grinscan.net/block/000261a48947f69bf38e4edf33b7efa18cd3ecd24a7a8699ec70ebe45e373768#o1) | [Output n°2](https://grinscan.net/block/0000ada472a31ed7b0054e16a565427e8ec8d36e8edae0f571c50c3bcab9ac51#o1)
-	[Attacker's Txs Kernel in REORG block](https://grinscan.net/block/000261a48947f69bf38e4edf33b7efa18cd3ecd24a7a8699ec70ebe45e373768k0) | [Attacker's Txs Kernel in stale block](https://grinscan.net/block/0000ada472a31ed7b0054e16a565427e8ec8d36e8edae0f571c50c3bcab9ac51#k0)
+	[Confirmed in stale Block n°949501](https://grinscan.net/block/0000ada472a31ed7b0054e16a565427e8ec8d36e8edae0f571c50c3bcab9ac51) |[Confirmed in REORG Block n° 949493](https://grinscan.net/block/000261a48947f69bf38e4edf33b7efa18cd3ecd24a7a8699ec70ebe45e373768)
+	[Output n°1](https://grinscan.net/block/0000ada472a31ed7b0054e16a565427e8ec8d36e8edae0f571c50c3bcab9ac51#o0) | [Output n°1](https://grinscan.net/block/000261a48947f69bf38e4edf33b7efa18cd3ecd24a7a8699ec70ebe45e373768#o0)
+	[Output n°2](https://grinscan.net/block/0000ada472a31ed7b0054e16a565427e8ec8d36e8edae0f571c50c3bcab9ac51#o1) | [Output n°2](https://grinscan.net/block/000261a48947f69bf38e4edf33b7efa18cd3ecd24a7a8699ec70ebe45e373768#o1)
+	[Attacker's Txs Kernel in stale block](https://grinscan.net/block/0000ada472a31ed7b0054e16a565427e8ec8d36e8edae0f571c50c3bcab9ac51#k0) | [Attacker's Txs Kernel in REORG block](https://grinscan.net/block/000261a48947f69bf38e4edf33b7efa18cd3ecd24a7a8699ec70ebe45e373768k0)
 
 **Result of the 1st REORG is a transaction double-spent after 10 confirmations.**
 
@@ -85,12 +85,12 @@ In these REORGs, we see the same entity spending one transaction at each REORG, 
       
 
 
-	Malicious tx confirmed in REORG block| Malicious tx confirmed in stale block
+	Malicious tx confirmed in stale block | Malicious tx confirmed in REORG block
 	------------ | -------------
-	[Confirmed in REORG Block n° 949664](https://grinscan.net/block/0000a70697eaabc770ee771eaf15c433dcda183555cc5fb6688f13c543d88106) | [Confirmed in orphaned Block n°949670](https://grinscan.net/block/0002027a030163d06dd9127b798c6fff17e19204f7e1ebd415313ca712810d81)
-	[Output n°1](https://grinscan.net/block/0000a70697eaabc770ee771eaf15c433dcda183555cc5fb6688f13c543d88106#o0) | [Output n°1](https://grinscan.net/block/0002027a030163d06dd9127b798c6fff17e19204f7e1ebd415313ca712810d81#o0)
-	[Output n°2](https://grinscan.net/block/0000a70697eaabc770ee771eaf15c433dcda183555cc5fb6688f13c543d88106#o1) | [Output n°2](https://grinscan.net/block/0002027a030163d06dd9127b798c6fff17e19204f7e1ebd415313ca712810d81#o1)
-	[Attacker's Txs Kernel in REORG block](https://grinscan.net/block/0000a70697eaabc770ee771eaf15c433dcda183555cc5fb6688f13c543d88106#k0) | [Attacker's Txs Kernel in stale block](https://grinscan.net/block/0002027a030163d06dd9127b798c6fff17e19204f7e1ebd415313ca712810d81#k0)
+	[Confirmed in orphaned Block n°949670](https://grinscan.net/block/0002027a030163d06dd9127b798c6fff17e19204f7e1ebd415313ca712810d81) | [Confirmed in REORG Block n° 949664](https://grinscan.net/block/0000a70697eaabc770ee771eaf15c433dcda183555cc5fb6688f13c543d88106)
+	[Output n°1](https://grinscan.net/block/0002027a030163d06dd9127b798c6fff17e19204f7e1ebd415313ca712810d81#o0) | [Output n°1](https://grinscan.net/block/0000a70697eaabc770ee771eaf15c433dcda183555cc5fb6688f13c543d88106#o0)
+	[Output n°2](https://grinscan.net/block/0002027a030163d06dd9127b798c6fff17e19204f7e1ebd415313ca712810d81#o1) | [Output n°2](https://grinscan.net/block/0000a70697eaabc770ee771eaf15c433dcda183555cc5fb6688f13c543d88106#o1)
+	[Attacker's Txs Kernel in stale block](https://grinscan.net/block/0002027a030163d06dd9127b798c6fff17e19204f7e1ebd415313ca712810d81#k0) | [Attacker's Txs Kernel in REORG block](https://grinscan.net/block/0000a70697eaabc770ee771eaf15c433dcda183555cc5fb6688f13c543d88106#k0)
 
 **Result of the 2nd REORG is a transaction double-spent after 9 confirmations.**
 
@@ -107,21 +107,20 @@ In these REORGs, we see the same entity spending one transaction at each REORG, 
       
 
 
-	Malicious tx confirmed in REORG block| Malicious tx confirmed in stale block
+	Malicious tx confirmed in stale block | Malicious tx confirmed in REORG block
 	------------ | -------------
-	[Confirmed in REORG Block n° 949718](https://grinscan.net/block/0000a70697eaabc770ee771eaf15c433dcda183555cc5fb6688f13c543d88106) | [Confirmed in stale Block n°949720](https://grinscan.net/block/0001170468d147e75492d9b1dbf3c8bee3869fa88c4f33508b7ddda3be0f2464)
-	[Output n°1](https://grinscan.net/block/00025b694866287b64b04f3e021a6800356b74313e8fee72f1788a1009fd11b5#o0) | [Output n°1](https://grinscan.net/block/0001170468d147e75492d9b1dbf3c8bee3869fa88c4f33508b7ddda3be0f2464#o3)
-	[Output n°2](https://grinscan.net/block/00025b694866287b64b04f3e021a6800356b74313e8fee72f1788a1009fd11b5#o1) | [Output n°2](https://grinscan.net/block/0001170468d147e75492d9b1dbf3c8bee3869fa88c4f33508b7ddda3be0f2464#o4)
-	[Attacker's Txs Kernel in REORG block](https://grinscan.net/block/0001170468d147e75492d9b1dbf3c8bee3869fa88c4f33508b7ddda3be0f2464#k0) | [Attacker's Txs Kernel in stale  block](https://grinscan.net/block/0001170468d147e75492d9b1dbf3c8bee3869fa88c4f33508b7ddda3be0f2464#k3)
+	[Confirmed in stale Block n°949720](https://grinscan.net/block/0001170468d147e75492d9b1dbf3c8bee3869fa88c4f33508b7ddda3be0f2464) | [Confirmed in REORG Block n° 949718](https://grinscan.net/block/0000a70697eaabc770ee771eaf15c433dcda183555cc5fb6688f13c543d88106)
+	[Output n°1](https://grinscan.net/block/0001170468d147e75492d9b1dbf3c8bee3869fa88c4f33508b7ddda3be0f2464#o3) | [Output n°1](https://grinscan.net/block/00025b694866287b64b04f3e021a6800356b74313e8fee72f1788a1009fd11b5#o0)
+	[Output n°2](https://grinscan.net/block/0001170468d147e75492d9b1dbf3c8bee3869fa88c4f33508b7ddda3be0f2464#o4) | [Output n°2](https://grinscan.net/block/00025b694866287b64b04f3e021a6800356b74313e8fee72f1788a1009fd11b5#o1)
+	[Attacker's Txs Kernel in stale  block](https://grinscan.net/block/0001170468d147e75492d9b1dbf3c8bee3869fa88c4f33508b7ddda3be0f2464#k3) | [Attacker's Txs Kernel in REORG block](https://grinscan.net/block/0001170468d147e75492d9b1dbf3c8bee3869fa88c4f33508b7ddda3be0f2464#k0)
 
 **Result of the 3rd REORG is a transaction double-spent after 18 confirmations.**
 
-### Honest Transaction in stale/orphan blocks
-Honest transactions sent and confirmed in stale/orphan block during the REORG :
+### Honest transaction in stale/orphan blocks
 - some have been confirmed back once the concerned REORG ended.
 - some others never been replayed in the main chain after the REORG. 
 
-We recommend to every users, if you received a transaction confirmed in a stale block which was canceled after one the of the REORG, to check if it's still confirmed. You might seen the transaction amount in the unconfirmed balance. If that's the case, you should contact the sender of the transaction in order to redo the transaction.
+We recommend to all users who transacted around this period to check the state of their transaction. You may find the transaction amount in the unconfirmed balance. If that's the case, you should contact the other party of the transaction in order to re-create it.
 
 ## Mitigations
 
@@ -129,18 +128,20 @@ We recommend to every users, if you received a transaction confirmed in a stale 
 The hashrate seems to now have stabilized at normal conditions. Community members detected the abnormalities and cautioned all exchanges and pools to increase the minimum required number of confirmations in light of this. As always, it is important to require high confirmations for large payments on any network.
 
 #### Community Vigilance
-The community will continue to stay vigilant to detect these events and make best efforts to protect the Grin ecosystem. Some Grin users, drastically increased the REORG txs pool cache time of their running node which was by default set to 30 minutes. In case of future REORG, all transaction from honest users will be rebroadcasted directly at its end.
+The community will continue to stay vigilant to detect these events and make best efforts to protect the Grin ecosystem. 
 
-We suggest every users to run their own Grin node (Grin-Node, Grin++) whenever possible (short time, long-term, does not matter), make sure your port 3414 is open if you wish to have inbound connections and not only outbound.
+Some users drastically increased the transaction pool cache timer of their running node which is set by default to 30 minutes. In case of future REORGs, all transactions from honest users will be rebroadcast directly at its end.
+
+We suggest every user to run their own node (Grin-Node, Grin++) whenever possible (short time, long-term, does not matter). Kake sure you have 3414 is open if you wish to have inbound connections, instead of only outbound.
 
 #### Miners
-If you have the possibility, mine with GPU in your lunch-break / over night / 15 min a day / during coffee break. You will help to make the Grin network safer.
+If you can, mine with a GPU in your lunch-break/over night//during coffee break. You will help to make the Grin network safer.
 
 #### ASICs 
-We wish to see as soon as possible C32 ASICs sell publicly, in order to have less hashing power influence from Nicehash. ASICs would help the network become safer and render Nicehash GPUs for rent quite useless for any malicious attempts.
+We wish to see C32 ASICs sell publicly as soon as possible. ASICs would help the network become safer and render Nicehash GPUs for rent quite useless for any malicious attempts.
 
 ## Contact
-If you need to contact us: https://github.com/MCM-Mike/grinnode.live/blob/master/contact.md 
+If you want to contact us: https://github.com/MCM-Mike/grinnode.live/blob/master/contact.md 
 
 ### Sources
 
@@ -151,6 +152,6 @@ If you need to contact us: https://github.com/MCM-Mike/grinnode.live/blob/master
   - [5] : https://en.bitcoin.it/wiki/Vocabulary#Stale_Block
 
 ### Credits
-This report was co-written by `deeev` (Keybase).
+This report was co-written by `deeev` (Keybase) and `Paouky`.
 
 
