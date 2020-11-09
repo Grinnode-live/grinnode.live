@@ -21,15 +21,9 @@ In the data provided by [forkwartch.io](https://www.forkwatch.io/grincuckatoo32)
 > 
 > In order to achieve a successful double-spend along with a REORG attack, an entity needs to secretly mine a seperate fork of the chain with majority hashrate (graph rate), thus superceding the honest blockchain in difficulty (future orphaned and stale blocks). The attacker creates a transaction on each chain; On the honest chain, the transaction will be sent to the victim and will look legit, until the attacker propagates his secretly mined chain, the REORG chain, in which he self-spent that same transaction. The self-spend in the REORG chain will be considered legit by all honest nodes, following the 'most cumulative difficulty' rule. Usually, the attacker propagates the dishonest chain when the transaction has passed multiple confirmations. This attack aims to circumvent the multiple confirmations system required to deposit on an exchange. After having released the secretly mined chain, the attacker essentially gets back the funds originally sent to the victim in his wallet.
 
+Accordingly, this net hashrate increase and Nicehash rate doubling suggest successfully created large REORGs. As results of this network activity, Grin-Nodes by [Grinnode.live](https://grinnode.live/) indeed reported on REORGs. These Grin-Nodes are part of the "Reorg Monitoring-System" run by [Grinnode.live Infrastructure ](https://github.com/MCM-Mike/grinnode.live#infrastructure-grinnodelive).
 
-
-
-
-
-Accordingly, to this net hashrate increase and nicehash rate doubling, it appears the entity successfully created large REORGs.
-In these REORGs, we could have seen the same entity double-spending one transaction at each REORG, we could possibly assume from that activity an attempt to realize a double-spend attack on exchange. 
-
-As results of this network activity, Grin-Nodes by [Grinnode.live](https://grinnode.live/) reported REORGs. These Grin-Nodes are part of the "Reorg Monitoring-System" run by [Grinnode.live Infrastructure ](https://github.com/MCM-Mike/grinnode.live#infrastructure-grinnodelive) :
+In these REORGs, we see the same entity spending one transaction at each REORG, indicating an attempt to realize a double-spend attack, likely on an exchange. 
 
 ##### 1st REORG
 
@@ -95,6 +89,7 @@ As results of this network activity, Grin-Nodes by [Grinnode.live](https://grinn
 
 ### Honest Transaction in orphan blocks
 Honest transactions sent and confirmed in an orphaned block during the REORG, have been confirmed back once the concerned REORG ended. Only the transactions made by the attacker were double-spent.
+
 ## Mitigations
 
 ### Higher confirmations required
@@ -104,14 +99,14 @@ The hashrate seems to now have stabilized at normal conditions. Community member
 The community will continue to stay vigilant to detect these events and make best efforts to protect the Grin ecosystem. We suggest every users to run their own Grin node (Grin-Node, Grin++) whenever possible (short time, long-term, does not matter), make sure your port 3414 is open if you wish to have inbound connections and not only outbound.
 
 ### Miners
-If you have the possibility, mine with GPU in your launch - break / over night / 15 min a day / during coffee break. You will help to make the Grin network safer.
+If you have the possibility, mine with GPU in your lunch-break / over night / 15 min a day / during coffee break. You will help to make the Grin network safer.
 
 ### ASICs 
-We wish to see as soon as possible C32 ASICs in public sales, in order to have less hashing power influence from Nicehash. ASICs would help the network getting safer and Nicehash useless for any malicious attempts.
+We wish to see as soon as possible C32 ASICs sell publicly, in order to have less hashing power influence from Nicehash. ASICs would help the network become safer and render Nicehash GPUs for rent quite useless for any malicious attempts.
 
 ## Contact
 If you need to contact us: https://github.com/MCM-Mike/grinnode.live/blob/master/contact.md 
 
 ### Credits
-This report was also written by `deeev` (Keybase) 
+This report was co-written by `deeev` (Keybase).
 
