@@ -27,12 +27,12 @@ In the mid of 2020-11-07, at 22:40:42 UTC and 2020-11-08, at 02:27:17 UTC, an un
 
 #### Grin Hashrate increase
 Grin network hashrate has increased considerably 3 times, between 22:40:42 and 02:27:17 UTC . This coincides with the Nicehash rate doubling in this time with well over 50% of the network hashrate currently outside of known pools.
-- Grin unknown miners and pools hashrate during the attack [1]
-![grin-mining-stats](images/grin-mining-stats.png "Grin unknown miners and pools hashrate pools Hashrate") 
 
-- Grin C29z and C32 hashrate chart correlated approximately to REORGs times 
-![grin-hashrate-chart](images/grin-hashrate-chart.png "Grin Hashrate Chart with REORG") 
+Grin unknown miners and pools hashrate during the attack [1]	
+<img src="images/grin-mining-stats.png" alt="Grin unknown miners and pools hashrate pools Hashrate" width="600">
 
+Grin C29z and C32 hashrate chart correlated approximately to REORGs times 
+<img src="images/grin-hashrate-chart.png" alt="Grin Hashrate Chart with REORG" width="600">
 
 #### Nicehash C32 rate doubling
 As shown by [forkwartch.io](https://www.forkwatch.io/grincuckatoo32), we can see an anomaly in the Nicehash cost with one huge spike during the attack, this result an abnormal average price of ~0.218 BTC/KGPS/DAY during the malicious Grin network hashrate increase, instead of the normal average price of ~0.13 BTC/KGPS/DAY.
@@ -42,22 +42,21 @@ As shown by [forkwartch.io](https://www.forkwatch.io/grincuckatoo32), we can see
 #### Details of the REORGs
 
 
-> In order to realise a successful double-spend thanks to REORG attack, an entity needs to secretly mining a chain with his nodes (REORG attack) totaling 51% of the hashrate of the honest chain (future orphaned and stale blocks). The attacker will makes the same transaction on each chain, on the honest chain the transaction will be sent to the victim, this transaction will looks legit until the attacker propagates his secretly mined chain (REORG chain) where he self-spent his transaction (the same is sent to the victim), to all others honest nodes of the network. Usually, the attacker propagates the dishonest chain when the transaction has passed multiple confirmations, most of the time, this attack aims to complete the multiple confirmations system required to deposit on an exchange and after having released the secretly mined chain, get back the fund sent to the victim in his wallet, the attacker wallet.
+> In order to achieve a successful double-spend along with a REORG attack, an entity needs to secretly mine a seperate fork of the chain with majority hashrate (graph rate), thus superceding the honest blockchain in difficulty (future orphaned and stale blocks). The attacker creates a transaction on each chain; On the honest chain, the transaction will be sent to the victim and will look legit, until the attacker propagates his secretly mined chain, the REORG chain, in which he self-spent that same transaction. The self-spend in the REORG chain will be considered legit by all honest nodes, following the 'most cumulative difficulty' rule. Usually, the attacker propagates the dishonest chain when the transaction has passed multiple confirmations. This attack aims to circumvent the multiple confirmations system required to deposit on an exchange. After having released the secretly mined chain, the attacker essentially gets back the funds originally sent to the victim in his wallet.
 
 
-- Definitions of some terms :
-	- REORG : The term "blockchain reorganization" (REORG) is used to refer to the situation where a client discovers a new difficultywise-longest well-formed blockchain which excludes one or more blocks that the client previously thought were part of the difficultywise-longest well-formed blockchain. These excluded blocks become orphans. [2]
+- **Definitions of some terms** :
+	- _REORG attack_ : A blockchain reorganization attack occurs when miners collaborate to remove previously confirmed blocks from the blockchain, by providing the network with a new blockchain of higher cumulative difficulty, achieved by having majority hashrate. [2]
 
-	- REORG attack : A blockchain reorganization attack occurs when miners collaborate to remove previously confirmed blocks from the blockchain. [3]
+	- _REORG attack_ : A blockchain reorganization attack occurs when miners collaborate to remove previously confirmed blocks from the blockchain. [3]
 	
-	- Orphan block :  Not part of the longest valid chain, and the parent of the orphan block is unknown. [4]
+	- _Orphan block_ :  Not part of the longest valid chain, and the parent of the orphan block is unknown. [4]
 	
-	- Stale block : Well-formed block which is no longer part of the difficultywise-longest and well-formed blockchain [5]
+	- _Stale block_ : Well-formed block which is no longer part of the difficultywise-longest and well-formed blockchain [5]
 	
-Accordingly to this net hashrate increase and nicehash rate doubling, it appears the entity successfully created large REORGs.
-In these REORGs, we could have seen the same entity double-spending one transaction at each REORG, we could possibly assume from that activity an attempt to realize a double-spend attack on exchange. 
+Accordingly, this net hashrate increase and Nicehash rate doubling suggest successfully created large REORGs. As results of this network activity, Grin-Nodes by [Grinnode.live](https://grinnode.live/) indeed reported on REORGs. These Grin-Nodes are part of the "Reorg Monitoring-System" run by [Grinnode.live Infrastructure ](https://github.com/MCM-Mike/grinnode.live#infrastructure-grinnodelive).
 
-As results of this network activity, Grin-Nodes by [Grinnode.live](https://grinnode.live/) reported REORGs. These Grin-Nodes are part of the "Reorg Monitoring-System" run by [Grinnode.live Infrastructure ](https://github.com/MCM-Mike/grinnode.live#infrastructure-grinnodelive) :
+In these REORGs, we see the same entity spending one transaction at each REORG, indicating an attempt to realize a double-spend attack, likely on an exchange. 
 
 ##### 1st REORG
 
@@ -122,7 +121,7 @@ As results of this network activity, Grin-Nodes by [Grinnode.live](https://grinn
 **Result of the 3rd REORG is a transaction double-spent after 18 confirmations.**
 
 ### Honest Transaction in stale/orphan blocks
-Honest transactions sent and confirmed in stale/orphaned block during the REORG :
+Honest transactions sent and confirmed in stale/orphan block during the REORG :
 - some have been confirmed back once the concerned REORG ended.
 - some others never been replayed in the main chain after the REORG. 
 
@@ -130,17 +129,19 @@ We recommend to every users, if you received a transaction confirmed in a stale 
 
 ## Mitigations
 
-### Higher confirmations required
+#### Higher confirmations required
 The hashrate seems to now have stabilized at normal conditions. Community members detected the abnormalities and cautioned all exchanges and pools to increase the minimum required number of confirmations in light of this. As always, it is important to require high confirmations for large payments on any network.
 
-### Community Vigilance
-The community will continue to stay vigilant to detect these events and make best efforts to protect the Grin ecosystem. We suggest every users to run their own Grin node (Grin-Node, Grin++) whenever possible (short time, long-term, does not matter), make sure your port 3414 is open if you wish to have inbound connections and not only outbound.
+#### Community Vigilance
+The community will continue to stay vigilant to detect these events and make best efforts to protect the Grin ecosystem. Some Grin users, drastically increased the REORG cache time of their running node which was by default set to 30 minutes. In case of future REORG, all transaction from honest users will be rebroadcasted directly at its end.
 
-### Miners
-If you have the possibility, mine with GPU in your launch - break / over night / 15 min a day / during coffee break. You will help to make the Grin network safer.
+We suggest every users to run their own Grin node (Grin-Node, Grin++) whenever possible (short time, long-term, does not matter), make sure your port 3414 is open if you wish to have inbound connections and not only outbound.
 
-### ASICs 
-We wish to see as soon as possible C32 ASICs in public sales, in order to have less hashing power influence from Nicehash. ASICs would help the network getting safer and Nicehash useless for any malicious attempts.
+#### Miners
+If you have the possibility, mine with GPU in your lunch-break / over night / 15 min a day / during coffee break. You will help to make the Grin network safer.
+
+#### ASICs 
+We wish to see as soon as possible C32 ASICs sell publicly, in order to have less hashing power influence from Nicehash. ASICs would help the network become safer and render Nicehash GPUs for rent quite useless for any malicious attempts.
 
 ## Contact
 If you need to contact us: https://github.com/MCM-Mike/grinnode.live/blob/master/contact.md 
