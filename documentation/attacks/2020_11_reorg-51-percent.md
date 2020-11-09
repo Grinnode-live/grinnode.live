@@ -51,7 +51,7 @@ As shown by [forkwartch.io](https://www.forkwatch.io/grincuckatoo32), we can see
 Accordingly, to this net hashrate increase and nicehash rate doubling, it appears the entity successfully created large REORGs.
 In these REORGs, we could have seen the same entity double-spending one transaction at each REORG, we could possibly assume from that activity an attempt to realize a double-spend attack on exchange. 
 
-As results of this network activity, Grin nodes monitored by [Grinnode.live](https://grinnode.live/) reported REORGs:
+As results of this network activity, Grin-Nodes by [Grinnode.live](https://grinnode.live/) reported REORGs. These Grin-Nodes are part of the "Reorg Monitoring-System" run by [Grinnode.live Infrastructure ](https://github.com/MCM-Mike/grinnode.live#infrastructure-grinnodelive) :
 
 ##### 1st REORG
 
