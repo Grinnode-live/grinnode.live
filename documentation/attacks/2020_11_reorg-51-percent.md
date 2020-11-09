@@ -1,6 +1,6 @@
 # GRIN Double-Spend Attack - 2020/11/08
 
-In the mid of 2020-11-07, at 22:40:42 UTC and 2020-11-08, at 02:27:17 UTC, an unknown entity acquired enough hashpower to attempt 51% attacks on the Grin network. In this document, we will report the activity on the Grin network during this period of time and raise some possibilities to mitigate these attacks in the future. 
+In the mid of 2020-11-07, at 22:40:42 UTC and 2020-11-08, at 02:27:17 UTC, an unknown entity acquired enough hash-power to attempt 51% attacks on the Grin network. In this document, we will report the activity on the Grin network during this period of time and raise some possibilities to mitigate these attacks in the future. 
 
 ## Contents
 + [Reported Network Activity](#Reported-Network-Activity)
@@ -24,16 +24,16 @@ In the mid of 2020-11-07, at 22:40:42 UTC and 2020-11-08, at 02:27:17 UTC, an un
 ### Overview of the attack
 
 #### Grin Hashrate increase
-Grin network hashrate has increased considerably 3 times, between 22:40:42 and 02:27:17 UTC . This coincides with the nicehash rate doubling in this time with well over 50% of the network hashrate currently outside of known pools.
-- Grin unknow miners and pools hashrate during the attack
-![grin-mining-stats](images/grin-mining-stats.png "Grin unknow miners and pools hashrate pools Hashrate") 
+Grin network hashrate has increased considerably 3 times, between 22:40:42 and 02:27:17 UTC . This coincides with the Nicehash rate doubling in this time with well over 50% of the network hashrate currently outside of known pools.
+- Grin unknown miners and pools hashrate during the attack
+![grin-mining-stats](images/grin-mining-stats.png "Grin unknown miners and pools hashrate pools Hashrate") 
 
-- Grin C29z and C32 hashrate chart correlated approximatively to REORGs times 
+- Grin C29z and C32 hashrate chart correlated approximately to REORGs times 
 ![grin-hashrate-chart](images/grin-hashrate-chart.png "Grin Hashrate Chart with REORG") 
 
 
 #### Nicehash C32 rate doubling
-As shown by [forkwartch.io](https://www.forkwatch.io/grincuckatoo32), we can see an anomaly in the nicehash cost with one huge spike during the attack, this result an abnormal average price of ~0.218 BTC/KGPS/DAY during the malicious Grin network hashrate increase, instead of the normal average price of ~0.13 BTC/KGPS/DAY.
+As shown by [forkwartch.io](https://www.forkwatch.io/grincuckatoo32), we can see an anomaly in the Nicehash cost with one huge spike during the attack, this result an abnormal average price of ~0.218 BTC/KGPS/DAY during the malicious Grin network hashrate increase, instead of the normal average price of ~0.13 BTC/KGPS/DAY.
 
 ![forkwatch.io](images/forkwatch-c32-report.png "forkwatch.io c32 hashrate report") 
 
@@ -43,7 +43,7 @@ As shown by [forkwartch.io](https://www.forkwatch.io/grincuckatoo32), we can see
 
 > REORG attack : A blockchain reorganization attack occurs when miners collaborate to remove previously confirmed blocks from the blockchain.
 
-> In order to realise a successful double-spend thanks to REORG attack, an entity needs to secretly mining a chain with his nodes (REORG attack) totalising 51% of the hashrate of the honest chain (future orphaned and stale blocks). The attacker will makes the same transaction on each chain, on the honest chain the transaction will be sent to the victim, this transaction will looks legit until the attacker propagates his secretly mined chain (REORG chain) where he self-spent his transaction (the same is sent to the victim), to all others honest nodes of the network. Usually, the attacker propagates the dishonest chain when the transaction has passed multiple confirmations, most of the time, this attack aims to complete the multiple confirmations system required to deposit on an exchange and after having released the secretly mined chain, get back the fund sent to the victim in his wallet, the attacker wallet.
+> In order to realise a successful double-spend thanks to REORG attack, an entity needs to secretly mining a chain with his nodes (REORG attack) totaling 51% of the hashrate of the honest chain (future orphaned and stale blocks). The attacker will makes the same transaction on each chain, on the honest chain the transaction will be sent to the victim, this transaction will looks legit until the attacker propagates his secretly mined chain (REORG chain) where he self-spent his transaction (the same is sent to the victim), to all others honest nodes of the network. Usually, the attacker propagates the dishonest chain when the transaction has passed multiple confirmations, most of the time, this attack aims to complete the multiple confirmations system required to deposit on an exchange and after having released the secretly mined chain, get back the fund sent to the victim in his wallet, the attacker wallet.
 
 
 
@@ -123,7 +123,7 @@ Honest transactions sent and confirmed in an orphaned block during the REORG, ha
 The hashrate seems to now have stabilized at normal conditions. Community members detected the abnormalities and cautioned all exchanges and pools to increase the minimum required number of confirmations in light of this. As always, it is important to require high confirmations for large payments on any network.
 
 ### Community Vigilance
-The community will continue to stay vigilant to detect these events and make best efforts to protect the Grin ecosystem. We suggest every users to run their own Grin node (Grin-Node, Grin++) whenever possible (short time, long-term, does not matter), make sure your port 3414 is open if you wish to have inbound connections and not only outbounds.
+The community will continue to stay vigilant to detect these events and make best efforts to protect the Grin ecosystem. We suggest every users to run their own Grin node (Grin-Node, Grin++) whenever possible (short time, long-term, does not matter), make sure your port 3414 is open if you wish to have inbound connections and not only outbound.
 
 ### Miners
 If you have the possibility, mine with GPU in your launch - break / over night / 15 min a day / during coffee break. You will help to make the Grin network safer.
@@ -136,4 +136,3 @@ If you need to contact us: https://github.com/MCM-Mike/grinnode.live/blob/master
 
 ### Credits
 This report was also written by `deeev` (Keybase) 
-
