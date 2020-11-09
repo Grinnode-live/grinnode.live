@@ -155,4 +155,6 @@ If you need to contact us: https://github.com/MCM-Mike/grinnode.live/blob/master
   - [5] : https://en.bitcoin.it/wiki/Vocabulary#Stale_Block
 
 ### Credits
-This report was also written by `deeev` (Keybase) 
+This report was co-written by `deeev` (Keybase).
+
+
