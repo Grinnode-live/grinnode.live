@@ -92,21 +92,21 @@ Honest transactions sent and confirmed in an orphaned block during the REORG, ha
 
 ## Mitigations
 
-### Higher confirmations required
+#### Higher confirmations required
 The hashrate seems to now have stabilized at normal conditions. Community members detected the abnormalities and cautioned all exchanges and pools to increase the minimum required number of confirmations in light of this. As always, it is important to require high confirmations for large payments on any network.
 
-### Community Vigilance
+#### Community Vigilance
 The community will continue to stay vigilant to detect these events and make best efforts to protect the Grin ecosystem. We suggest every users to run their own Grin node (Grin-Node, Grin++) whenever possible (short time, long-term, does not matter), make sure your port 3414 is open if you wish to have inbound connections and not only outbound.
 
-### Miners
+#### Miners
 If you have the possibility, mine with GPU in your lunch-break / over night / 15 min a day / during coffee break. You will help to make the Grin network safer.
 
-### ASICs 
+#### ASICs 
 We wish to see as soon as possible C32 ASICs sell publicly, in order to have less hashing power influence from Nicehash. ASICs would help the network become safer and render Nicehash GPUs for rent quite useless for any malicious attempts.
 
 ## Contact
 If you need to contact us: https://github.com/MCM-Mike/grinnode.live/blob/master/contact.md 
 
-### Credits
+#### Credits
 This report was co-written by `deeev` (Keybase).
 
