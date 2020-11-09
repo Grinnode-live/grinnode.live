@@ -29,12 +29,9 @@ In the mid of 2020-11-07, at 22:40:42 UTC and 2020-11-08, at 02:27:17 UTC, an un
 Grin network hashrate has increased considerably 3 times, between 22:40:42 and 02:27:17 UTC . This coincides with the Nicehash rate doubling in this time with well over 50% of the network hashrate currently outside of known pools.
 
 <p align="center">
-Grin unknown miners and pools hashrate during the attack [1]
-	
+Grin unknown miners and pools hashrate during the attack [1]	
 <img src="images/grin-mining-stats.png" alt="Grin unknown miners and pools hashrate pools Hashrate" width="600">
-
 Grin C29z and C32 hashrate chart correlated approximately to REORGs times 
-	
 <img src="images/grin-hashrate-chart.png" alt="Grin Hashrate Chart with REORG" width="600">
 </p>
 
