@@ -1,4 +1,4 @@
-#### Grin Hashrate increase
+### Grin Hashrate increase
 Grin network hashrate has increased considerably 3 times, between 22:40:42 and 02:27:17 UTC . This coincides with the Nicehash rate doubling in this time with well over 50% of the network hashrate currently outside of known pools.
 
 - Grin unknown miners and pools hashrate during the attack
@@ -8,18 +8,18 @@ Grin network hashrate has increased considerably 3 times, between 22:40:42 and 0
 <img src="images/grin-hashrate-chart.png" alt="Grin Hashrate Chart with REORG" width="500"> 
 
 
-#### Nicehash C32 rate doubling
-As shown by [forkwartch.io](https://www.forkwatch.io/grincuckatoo32), we spot an anomaly in the Nicehash cost, seeing a huge spike during the attack, resulting in an abnormal average price of ~0.218 BTC/KGPS/DAY during the malicious hashrate increase, instead of the normal average price of ~0.13 BTC/KGPS/DAY.
+### Nicehash C32 rate doubling
+In the data provided by [forkwartch.io](https://www.forkwatch.io/grincuckatoo32), we spot an anomaly in the Nicehash cost, seeing a huge spike during the attack, resulting in an abnormal average price of ~0.218 BTC/KGPS/DAY during the malicious hashrate increase, instead of the normal average price of ~0.13 BTC/KGPS/DAY.
 
 ![forkwatch.io](images/forkwatch-c32-report.png "forkwatch.io c32 hashrate report") 
 
-#### Details of the REORGs
+### Details of the REORGs
 
 > REORG (blockchain reorganization) : A built-in feature of the Grin network designed to deal with the issue of simultaneously mined blocks. 
-
+>
 > REORG attack : A blockchain reorganization attack occurs when miners collaborate to remove previously confirmed blocks from the blockchain.
-
-> In order to realise a successful double-spend thanks to REORG attack, an entity needs to secretly mining a chain with his nodes (REORG attack) totaling 51% of the hashrate of the honest chain (future orphaned and stale blocks). The attacker will makes the same transaction on each chain, on the honest chain the transaction will be sent to the victim, this transaction will looks legit until the attacker propagates his secretly mined chain (REORG chain) where he self-spent his transaction (the same is sent to the victim), to all others honest nodes of the network. Usually, the attacker propagates the dishonest chain when the transaction has passed multiple confirmations, most of the time, this attack aims to complete the multiple confirmations system required to deposit on an exchange and after having released the secretly mined chain, get back the fund sent to the victim in his wallet, the attacker wallet.
+>
+> In order to achieve a successful double-spend thanks to REORG attack, an entity needs to secretly mine a chain, totaling 51% of the honest hashrate (future orphaned and stale blocks). The attacker will makes the same transaction on each chain, on the honest chain the transaction will be sent to the victim, this transaction will look legit until the attacker propagates his secretly mined chain, the REORG chain, in which he self-spent his transaction (the same as was sent to the victim), to all others honest nodes of the network. Usually, the attacker propagates the dishonest chain when the transaction has passed multiple confirmations, most of the time, this attack aims to complete the multiple confirmations system required to deposit on an exchange and after having released the secretly mined chain, get back the fund sent to the victim in his wallet, the attacker wallet.
 
 
 
