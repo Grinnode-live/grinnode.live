@@ -17,6 +17,7 @@ In the mid of 2020-11-07, at 22:40:42 UTC and 2020-11-08, at 02:27:17 UTC, an un
   + [Community Vigilance](Community-Vigilance)
   + [Miners](#Miners)
   + [ASICs](#ASICs)
++ [Contact](#Contact)
 
 ## Reported Network Activity
 
@@ -50,7 +51,7 @@ As shown by [forkwartch.io](https://www.forkwatch.io/grincuckatoo32), we can see
 Accordingly, to this net hashrate increase and nicehash rate doubling, it appears the entity successfully created large REORGs.
 In these REORGs, we could have seen the same entity double-spending one transaction at each REORG, we could possibly assume from that activity an attempt to realize a double-spend attack on exchange. 
 
-As results of this network activity, Grin nodes monitored by @mcmmike reported in total 3 large REORGs:
+As results of this network activity, Grin nodes monitored by [Grinnode.live](https://grinnode.live/) reported REORGs:
 
 ##### 1st REORG
 
@@ -129,3 +130,10 @@ If you have the possibility, mine with GPU in your launch - break / over night /
 
 ### ASICs 
 We wish to see as soon as possible C32 ASICs in public sales, in order to have less hashing power influence from Nicehash. ASICs would help the network getting safer and Nicehash useless for any malicious attempts.
+
+## Contact
+If you need to contact us: https://github.com/MCM-Mike/grinnode.live/blob/master/contact.md 
+
+### Credits
+This report was also written by `deeev` (Keybase) 
+
