@@ -51,6 +51,7 @@ In order to achieve a successful double-spend along with a REORG attack, an enti
 	
 	
 Accordingly, this net hashrate increase and Nicehash rate doubling suggest successfully created large REORGs. As a result of this network activity, Grin-Nodes, run by [Grinnode.live](https://grinnode.live/) and a part of the "Reorg Monitoring-System" run by [Grinnode.live Infrastructure ](https://github.com/MCM-Mike/grinnode.live#infrastructure-grinnodelive), have indeed reported on REORGs.
+=======
 
 In these REORGs, we see the same entity spending the same input on each seperate chains, indicating an attempt to realize a double-spend attack, most likely on an exchange. 
 
@@ -91,6 +92,7 @@ In these REORGs, we see the same entity spending the same input on each seperate
 	[Output n°1](https://grinscan.net/block/0002027a030163d06dd9127b798c6fff17e19204f7e1ebd415313ca712810d81#o0) | [Output n°1](https://grinscan.net/block/0000a70697eaabc770ee771eaf15c433dcda183555cc5fb6688f13c543d88106#o0)
 	[Output n°2](https://grinscan.net/block/0002027a030163d06dd9127b798c6fff17e19204f7e1ebd415313ca712810d81#o1) | [Output n°2](https://grinscan.net/block/0000a70697eaabc770ee771eaf15c433dcda183555cc5fb6688f13c543d88106#o1)
 	[Attacker's Txs Kernel in stale block](https://grinscan.net/block/0002027a030163d06dd9127b798c6fff17e19204f7e1ebd415313ca712810d81#k0) | [Attacker's Txs Kernel in REORG block](https://grinscan.net/block/0000a70697eaabc770ee771eaf15c433dcda183555cc5fb6688f13c543d88106#k0)
+=======
 
 **Result of the 2nd REORG is a transaction double-spent after 9 confirmations.**
 
@@ -131,6 +133,7 @@ The hashrate seems to now have stabilized at normal conditions. Community member
 The community will continue to stay vigilant to detect these events and make best efforts to protect the Grin ecosystem. 
 
 Some users drastically increased the transaction pool cache timer of their running node which is set by default to 30 minutes. In case of future REORGs, all transactions from honest users will be rebroadcast directly at its end.
+=======
 
 We suggest every user to run their own node (Grin-Node, Grin++) whenever possible (short time, long-term, does not matter). Kake sure you have 3414 is open if you wish to have inbound connections, instead of only outbound.
 
