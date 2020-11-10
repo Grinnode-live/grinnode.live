@@ -113,7 +113,7 @@ In these REORGs, we see the same entity spending the same input on each seperate
 	[Confirmed in stale Block n°949720](https://grinscan.net/block/0001170468d147e75492d9b1dbf3c8bee3869fa88c4f33508b7ddda3be0f2464) | [Confirmed in REORG Block n° 949718](https://grinscan.net/block/00025b694866287b64b04f3e021a6800356b74313e8fee72f1788a1009fd11b5)
 	[Output n°1](https://grinscan.net/block/0001170468d147e75492d9b1dbf3c8bee3869fa88c4f33508b7ddda3be0f2464#o3) | [Output n°1](https://grinscan.net/block/00025b694866287b64b04f3e021a6800356b74313e8fee72f1788a1009fd11b5#o0)
 	[Output n°2](https://grinscan.net/block/0001170468d147e75492d9b1dbf3c8bee3869fa88c4f33508b7ddda3be0f2464#o4) | [Output n°2](https://grinscan.net/block/00025b694866287b64b04f3e021a6800356b74313e8fee72f1788a1009fd11b5#o2)
-	[Attacker's Txs Kernel in stale  block](https://grinscan.net/block/0001170468d147e75492d9b1dbf3c8bee3869fa88c4f33508b7ddda3be0f2464#k3) | [Attacker's Txs Kernel in REORG block](https://grinscan.net/block/0001170468d147e75492d9b1dbf3c8bee3869fa88c4f33508b7ddda3be0f2464#k3)
+	[Attacker's Txs Kernel in stale  block](https://grinscan.net/block/0001170468d147e75492d9b1dbf3c8bee3869fa88c4f33508b7ddda3be0f2464#k3) | [Attacker's Txs Kernel in REORG block](https://grinscan.net/block/00025b694866287b64b04f3e021a6800356b74313e8fee72f1788a1009fd11b5#k1)
 
 **Result of the 3rd REORG is a transaction double-spent after 18 confirmations.**
 
