@@ -7,7 +7,7 @@ On 2020-11-07, 22:40:42 UTC and on 2020-11-08, 02:27:17 UTC, an unknown entity s
   + [Overview of the attack](#overview-of-the-attack)
     - [Grin Hashrate increase](#grin-hashrate-increase)
     - [Nicehash C32 rate doubling](#nicehash-c32-rate-doubling)
-    - [Details of the REORGs](#details-of-the-reorgs)
+    - [REORGs/51% attacks](#reorgs51-attacks)
       * [1st REORG](#1st-reorg)
       * [2nd REORG](#2nd-reorg)
       * [3rd REORG](#3rd-reorg)
