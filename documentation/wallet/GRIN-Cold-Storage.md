@@ -18,8 +18,11 @@ This is changing due to the following GRIN-Wallet changes:
 
 ### Tested on Version 
 [1] HOT-Wallet: https://github.com/mimblewimble/grin-wallet/releases/tag/v5.0.0-beta.2
+
 [2] Cold-Wallet: https://github.com/mimblewimble/grin-wallet/releases/tag/v5.0.0-beta.2
+
 [3] Node: https://github.com/mimblewimble/grin/tree/v5.0.0-beta.2
+
 [4] Linux System 64bit 
 
 ### Prerequisites:
