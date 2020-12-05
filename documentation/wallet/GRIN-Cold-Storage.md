@@ -31,7 +31,7 @@ Both GRIN-Wallets [1] + [2] have to have access to the GRIN-Node [2] for this in
 
 Given is the hot GRIN-Wallet[1] with `5 GRINs` [appendix 1] 
 
-____ Wallet Summary Info - Account 'default' as of height 989031 ____
+```____ Wallet Summary Info - Account 'default' as of height 989031 ____
 
  Confirmed Total                  | 0.000000000 
  Awaiting Confirmation (< 10)     | 0.000000000 
@@ -41,10 +41,10 @@ ____ Wallet Summary Info - Account 'default' as of height 989031 ____
  Currently Spendable              | 5.000000000 
 
 Command 'info' completed successfully
-
+```
 
 Given is the cold GRIN-Wallet[2] with `0 GRINs` [appendix 2] 
-
+```
 ____ Wallet Summary Info - Account 'default' as of height 989033 ____
 
  Confirmed Total                  | 0.000000000 
@@ -55,7 +55,7 @@ ____ Wallet Summary Info - Account 'default' as of height 989033 ____
  Currently Spendable              | 0.000000000 
 
 Command 'info' completed successfully
-
+```
 Now we are per-generating a transaction from Wallet[1] sending future GRINs to the cold Wallet[2] 
 This can be done using the `Slatepack Address` as a recipient or just a plain transaction not assigning a `slatepack address`
 We are showing both options in the following examples:
@@ -63,7 +63,7 @@ We are showing both options in the following examples:
 Pre-generate transactions **with** `Slatepack Address` 
 *Slatepack address: grin1tt74pwyywxds403nydk5rjk9tlxvpkf9u9t50u3td69a6dfrrs4qxvwhg3 [appendix 3]*
 
-_$:/tmp/wallet/v5-1$ ./grin-wallet -t /tmp/wallet/v5-1 send --late-lock --outfile /tmp/wallet/v5-1/slatepack/1-GRIN-Cold-storage..slatepack --dest grin1tt74pwyywxds403nydk5rjk9tlxvpkf9u9t50u3td69a6dfrrs4qxvwhg3 1
+`_$:/tmp/wallet/v5-1$ ./grin-wallet -t /tmp/wallet/v5-1 send --late-lock --outfile /tmp/wallet/v5-1/slatepack/1-GRIN-Cold-storage..slatepack --dest grin1tt74pwyywxds403nydk5rjk9tlxvpkf9u9t50u3td69a6dfrrs4qxvwhg3 1`
 Output see [appendix 4] 
 
 **Explaination:**
@@ -90,6 +90,7 @@ Pre generate transactions **without** `Slatepack Address`
 **All GRIN-Wallet outputs are in `debug` mode**
 
 [1] 
+```
 _$:/tmp/wallet/v5-1$ ./grin-wallet -t /tmp/wallet/v5-1 info
 20201205 15:14:36.035 INFO grin_util::logger - log4rs is initialized, file level: Debug, stdout level: Debug, min. level: Debug
 20201205 15:14:36.035 INFO grin_wallet - Using wallet configuration file at /tmp/wallet/v5-1/grin-wallet.toml
@@ -119,8 +120,9 @@ ____ Wallet Summary Info - Account 'default' as of height 989031 ____
  Currently Spendable              | 5.000000000 
 
 Command 'info' completed successfully
-
+```
 [2]
+```
 _$:/tmp/wallet/v5-2$ ./grin-wallet -t /tmp/wallet/v5-2 info
 20201205 15:18:04.925 INFO grin_util::logger - log4rs is initialized, file level: Debug, stdout level: Debug, min. level: Debug
 20201205 15:18:04.925 INFO grin_wallet - Using wallet configuration file at /tmp/wallet/v5-2/grin-wallet.toml
@@ -148,8 +150,9 @@ ____ Wallet Summary Info - Account 'default' as of height 989033 ____
  Currently Spendable              | 0.000000000 
 
 Command 'info' completed successfully
-
+```
 [3]
+```
 _$:/tmp/wallet/v5-2$ ./grin-wallet -t /tmp/wallet/v5-2 listen
 20201205 15:24:51.871 INFO grin_util::logger - log4rs is initialized, file level: Debug, stdout level: Debug, min. level: Debug
 20201205 15:24:51.871 INFO grin_wallet - Using wallet configuration file at /tmp/wallet/v5-2/grin-wallet.toml
@@ -179,9 +182,10 @@ Password:
 20201205 15:24:54.215 WARN grin_wallet_controller::controller - Starting HTTP Foreign listener API server at 127.0.0.1:3415.
 20201205 15:24:54.215 WARN grin_wallet_controller::controller - HTTP Foreign listener started.
 20201205 15:24:54.215 WARN grin_wallet_controller::controller - Slatepack Address is: grin1tt74pwyywxds403nydk5rjk9tlxvpkf9u9t50u3td69a6dfrrs4qxvwhg3
-
+```
 
 [4]
+```
 _$:/tmp/wallet/v5-1$ ./grin-wallet -t /tmp/wallet/v5-1 send --late-lock --outfile /tmp/wallet/v5-1/slatepack/1-GRIN-Cold-storage..slatepack --dest grin1tt74pwyywxds403nydk5rjk9tlxvpkf9u9t50u3td69a6dfrrs4qxvwhg3 1
 20201205 15:27:47.572 INFO grin_util::logger - log4rs is initialized, file level: Debug, stdout level: Debug, min. level: Debug
 20201205 15:27:47.573 INFO grin_wallet - Using wallet configuration file at /tmp/wallet/v5-1/grin-wallet.toml
@@ -251,7 +255,7 @@ Slatepack data was also output to
 The slatepack data is encrypted for the recipient only
 
 Command 'send' completed successfully
-
+```
 
 [5]
 
