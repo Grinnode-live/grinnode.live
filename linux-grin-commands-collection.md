@@ -46,7 +46,7 @@ Not OK:
 
 ### Send GRIN using GRIN-Wallet command line
 
-```grin-wallet --api_server_address "https://grinnode.live:3413" send -d http://wallet.grinnode.live:3415 --message "Donation Grinnode.live" -m http 5```
+```grin-wallet --api_server_address "https://grinnode.live:3413" send -d grin1zxwrf5yaxlyps4mpx3n7j9kp4su3gzgpdhfk2sgv56q0prcdlzls9e6e0y --message "Donation Grinnode.live"  5```
 
 
 ```--api_server_address "https://grinnode.live:3413```  If you dont have your own node, you can always use our public API
@@ -55,7 +55,6 @@ Not OK:
 
 ```--message "Donation Grinnode.live"``` Message is optional
 
-```-m http 5```  sending via HTTP "5" (amount) GRIN
 
 -----------------------------------------
 
