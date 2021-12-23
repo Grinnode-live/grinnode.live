@@ -40,9 +40,7 @@ _(not a full list, just some ideas)_
 ## Rules for joining the video-call 
 
 1. Be respectful.
-2. No racism
-3. No homophobia
-4. No trolling/spamming 
+2. No trolling/spamming 
 
 Looking forward to your first **Crypto-vacation video call**.
 
