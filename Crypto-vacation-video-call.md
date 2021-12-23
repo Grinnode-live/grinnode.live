@@ -8,11 +8,13 @@ During these turbulent times a lot of people are scattered around the world and 
 **First meeting** 
 Date: **24.12.2021** 
 
-**Time:** 
+**Time:** 4:00 PM UTC 
+**Duration:** 2h
  
 another meeting will be scheduled for **25.12.2021**
 
-**Time:**
+**Time:** 6:00 PM UTC
+**Duration:** 2h
 
 ## How to join?
 Just use the link below to join the meeting:
