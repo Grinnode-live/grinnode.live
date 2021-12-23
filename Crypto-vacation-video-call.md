@@ -20,8 +20,10 @@ another meeting will be scheduled for **25.12.2021**
 Just use the link below to join the meeting:
 https://video.grinnode.live/24-Video-Call-Crypto-Vacation
 
---
+----
+
 No need to enable your video if you don't want to share it, audio only is also supported. 
+
 We are using https://jitsi.org/ for the video call hosted on our own servers. 
 
 
