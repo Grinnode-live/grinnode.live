@@ -31,7 +31,7 @@ You can then share it for everyone, hopefully the screen-sharing will be working
 _(not a full list, just some ideas)_
 
 - who are you, give a short introduction where you from and what you want to share with everyone. 
-- Favorit crypto currency and why ? 
+- favorite crypto currency and why ? 
 - Interesting development in the crypto space (e.g. El Hodlador - Bitcoin city, etc )
 - Share some coffee and cold beverages with everyone. 
 - short talk about a topic? 
