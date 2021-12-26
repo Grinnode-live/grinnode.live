@@ -1,4 +1,4 @@
-Current mining pools for grin (12.10.2021)
+Current mining pools for grin (26.12.2021)
 
 **Pool url**|  Total hash rate |  Pool fee      
 :-----:|:-----:|:-----:|
