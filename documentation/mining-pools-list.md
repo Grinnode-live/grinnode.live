@@ -11,5 +11,5 @@ Current mining pools for grin (8.6.2022)
 [herominers.com](https://grin.herominers.com/) | 238 Gps | 0.9 % 
 [grinmint](https://grinmint.com/) | 49 Gps| 2.5 %
 
-
+ 
  
