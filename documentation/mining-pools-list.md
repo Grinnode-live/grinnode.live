@@ -9,7 +9,7 @@ Current mining pools for grin (2.7.2023)
 [gaeapool](https://gaeapool.com/) | 686 Gps | 1 % 
 [easygrin-SOLO](https://solo.easygrin.org/) | 234 Gps | 1% 
 [herominers.com](https://grin.herominers.com/) | 210 Gps | 0.9 % 
-[grinmint](https://grinmint.com/) | 30.6 Gps| 2.5 %
+[grinmint](https://grinmint.com/) | 30.6 Gps| 0.8 %
 
  
  
