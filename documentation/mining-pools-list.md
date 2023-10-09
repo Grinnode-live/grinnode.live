@@ -1,15 +1,15 @@
-Current mining pools for grin (2.7.2023)
+Current mining pools for grin (9.10.2023)
 
 **Pool url**|  Total hash rate |  Pool fee      
 :-----:|:-----:|:-----:|
-[always.vip](http://pool.always.vip/) | 2.65 KGps| 1 %
-[2miners](https://grin.2miners.com/)| 1.82 KGps| 1 %
-[easygrin.org](https://pool.easygrin.org)| 944.6 Gps | 1%
-[2miners-Solo](https://solo-grin.2miners.com/) | 760 Gps | 1.5 %
-[gaeapool](https://gaeapool.com/) | 686 Gps | 1 % 
-[easygrin-SOLO](https://solo.easygrin.org/) | 234 Gps | 1% 
-[herominers.com](https://grin.herominers.com/) | 210 Gps | 0.9 % 
-[grinmint](https://grinmint.com/) | 30.6 Gps| 0.8 %
+[always.vip](http://pool.always.vip/) | 2.64 KGps| 1 %
+[2miners](https://grin.2miners.com/)| 1.55 KGps| 1 %
+[easygrin.org](https://pool.easygrin.org)| 1.11 kGps | 1%
+[gaeapool](https://gaeapool.com/) | 957 Gps | 1 % 
+[2miners-Solo](https://solo-grin.2miners.com/) | 672 Gps | 1.5 %
+[herominers.com](https://grin.herominers.com/) | 290.8 Gps | 0.9 % 
+[easygrin-SOLO](https://solow.easygrin.org/) | 98 Gps | 1% 
+[grinmint](https://grinmint.com/) | 21.1 Gps| 0.8 %
 
  
  
